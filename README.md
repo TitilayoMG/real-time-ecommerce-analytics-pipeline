@@ -1,5 +1,6 @@
 # 🛒 Stream Store — Real-Time E-Commerce Analytics Pipeline
 
+![](arc_flow.png) 
 
 ## 📋 Table of Contents
 
@@ -769,30 +770,10 @@ Or use Power BI's built-in date hierarchy to drill from year → month → day n
 
 ---
 
-### Dashboard Layout (Recommended)
+### Dashboard 
 
-```
-┌─────────────────────────────────────────────────────────────────────┐
-│  💰 Total Revenue    📦 Qty Sold    🧾 Orders Count   🏷️ Products   │  ← KPI Row
-├──────────────────────────┬──────────────────────────────────────────┤
-│                          │                                          │
-│  Payment Method          │  Order Status Distribution               │
-│  Distribution            │                                          │
-│  (Donut Chart)           │  (Bar Chart)                             │
-│                          │                                          │
-├──────────────────────────┴──────────────────────────────────────────┤
-│                                                                      │
-│  Revenue Trend by Day of Week                                        │
-│  (Column Chart — full width)                                         │
-│                                                                      │
-├──────────────────────────┬──────────────────────────────────────────┤
-│                          │                                          │
-│  Top Customers           │  Top 3 Standout Products                 │
-│  Revenue & Sales Volume  │  by Revenue & Quantity                   │
-│  (Table)                 │  (Bar Chart)                             │
-│                          │                                          │
-└──────────────────────────┴──────────────────────────────────────────┘
-```
+![](Screenshot%202026-05-08%20105354.png) 
+
 
 ---
 
