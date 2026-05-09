@@ -1,0 +1,120 @@
+[2026-05-07T17:22:51.303+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-05-07T17:22:51.331+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: kafka_to_s3.dbt_staging manual__2026-05-07T17:21:25.697507+00:00 [queued]>
+[2026-05-07T17:22:51.346+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: kafka_to_s3.dbt_staging manual__2026-05-07T17:21:25.697507+00:00 [queued]>
+[2026-05-07T17:22:51.348+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2026-05-07T17:22:51.368+0000] {taskinstance.py:2890} INFO - Executing <Task(BashOperator): dbt_staging> on 2026-05-07 17:21:25.697507+00:00
+[2026-05-07T17:22:51.376+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=96) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-05-07T17:22:51.379+0000] {standard_task_runner.py:72} INFO - Started process 97 to run task
+[2026-05-07T17:22:51.380+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'kafka_to_s3', 'dbt_staging', 'manual__2026-05-07T17:21:25.697507+00:00', '--job-id', '152', '--raw', '--subdir', 'DAGS_FOLDER/main.py', '--cfg-path', '/tmp/tmpku64jarj']
+[2026-05-07T17:22:51.382+0000] {standard_task_runner.py:105} INFO - Job 152: Subtask dbt_staging
+[2026-05-07T17:22:51.464+0000] {task_command.py:467} INFO - Running <TaskInstance: kafka_to_s3.dbt_staging manual__2026-05-07T17:21:25.697507+00:00 [running]> on host d50ffedd74f8
+[2026-05-07T17:22:51.589+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='kafka_streaming' AIRFLOW_CTX_DAG_ID='kafka_to_s3' AIRFLOW_CTX_TASK_ID='dbt_staging' AIRFLOW_CTX_EXECUTION_DATE='2026-05-07T17:21:25.697507+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-05-07T17:21:25.697507+00:00'
+[2026-05-07T17:22:51.590+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2026-05-07T17:22:51.613+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2026-05-07T17:22:51.615+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', '\n        dbt run --select bronze --project-dir /opt/***/dbt --profiles-dir /opt/***/dbt\n        ']
+[2026-05-07T17:22:51.632+0000] {subprocess.py:99} INFO - Output:
+[2026-05-07T17:22:56.973+0000] {subprocess.py:106} INFO - [0m17:22:56  Encountered an error:
+[2026-05-07T17:22:56.975+0000] {subprocess.py:106} INFO - [Errno 13] Permission denied: '/opt/***/dbt/logs/dbt.log'
+[2026-05-07T17:22:56.983+0000] {subprocess.py:106} INFO - [0m17:22:56  Traceback (most recent call last):
+[2026-05-07T17:22:56.988+0000] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/dbt/cli/requires.py", line 138, in wrapper
+[2026-05-07T17:22:56.989+0000] {subprocess.py:106} INFO -     result, success = func(*args, **kwargs)
+[2026-05-07T17:22:56.990+0000] {subprocess.py:106} INFO -                       ^^^^^^^^^^^^^^^^^^^^^
+[2026-05-07T17:22:56.991+0000] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/dbt/cli/requires.py", line 77, in wrapper
+[2026-05-07T17:22:56.992+0000] {subprocess.py:106} INFO -     setup_event_logger(flags=flags, callbacks=callbacks)
+[2026-05-07T17:22:56.995+0000] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/dbt/events/logging.py", line 99, in setup_event_logger
+[2026-05-07T17:22:56.996+0000] {subprocess.py:106} INFO -     add_logger_to_manager(
+[2026-05-07T17:22:56.997+0000] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/dbt_common/events/event_manager_client.py", line 15, in add_logger_to_manager
+[2026-05-07T17:22:57.002+0000] {subprocess.py:106} INFO -     _EVENT_MANAGER.add_logger(logger)
+[2026-05-07T17:22:57.003+0000] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/dbt_common/events/event_manager.py", line 88, in add_logger
+[2026-05-07T17:22:57.006+0000] {subprocess.py:106} INFO -     _JsonLogger(config) if config.line_format == LineFormat.Json else _TextLogger(config)
+[2026-05-07T17:22:57.007+0000] {subprocess.py:106} INFO -                                                                       ^^^^^^^^^^^^^^^^^^^
+[2026-05-07T17:22:57.008+0000] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/dbt_common/events/logger.py", line 147, in __init__
+[2026-05-07T17:22:57.009+0000] {subprocess.py:106} INFO -     super().__init__(config)
+[2026-05-07T17:22:57.013+0000] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/dbt_common/events/logger.py", line 107, in __init__
+[2026-05-07T17:22:57.015+0000] {subprocess.py:106} INFO -     file_handler = RotatingFileHandler(
+[2026-05-07T17:22:57.017+0000] {subprocess.py:106} INFO -                    ^^^^^^^^^^^^^^^^^^^^
+[2026-05-07T17:22:57.018+0000] {subprocess.py:106} INFO -   File "/usr/local/lib/python3.12/logging/handlers.py", line 155, in __init__
+[2026-05-07T17:22:57.019+0000] {subprocess.py:106} INFO -     BaseRotatingHandler.__init__(self, filename, mode, encoding=encoding,
+[2026-05-07T17:22:57.025+0000] {subprocess.py:106} INFO -   File "/usr/local/lib/python3.12/logging/handlers.py", line 58, in __init__
+[2026-05-07T17:22:57.028+0000] {subprocess.py:106} INFO -     logging.FileHandler.__init__(self, filename, mode=mode,
+[2026-05-07T17:22:57.029+0000] {subprocess.py:106} INFO -   File "/usr/local/lib/python3.12/logging/__init__.py", line 1231, in __init__
+[2026-05-07T17:22:57.031+0000] {subprocess.py:106} INFO -     StreamHandler.__init__(self, self._open())
+[2026-05-07T17:22:57.032+0000] {subprocess.py:106} INFO -                                  ^^^^^^^^^^^^
+[2026-05-07T17:22:57.033+0000] {subprocess.py:106} INFO -   File "/usr/local/lib/python3.12/logging/__init__.py", line 1263, in _open
+[2026-05-07T17:22:57.035+0000] {subprocess.py:106} INFO -     return open_func(self.baseFilename, self.mode,
+[2026-05-07T17:22:57.036+0000] {subprocess.py:106} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-05-07T17:22:57.038+0000] {subprocess.py:106} INFO - PermissionError: [Errno 13] Permission denied: '/opt/***/dbt/logs/dbt.log'
+[2026-05-07T17:22:57.040+0000] {subprocess.py:106} INFO - 
+[2026-05-07T17:22:57.433+0000] {subprocess.py:110} INFO - Command exited with return code 2
+[2026-05-07T17:22:57.459+0000] {taskinstance.py:3313} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 768, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 734, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 276, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 2.
+[2026-05-07T17:22:57.472+0000] {taskinstance.py:1226} INFO - Marking task as FAILED. dag_id=kafka_to_s3, task_id=dbt_staging, run_id=manual__2026-05-07T17:21:25.697507+00:00, execution_date=20260507T172125, start_date=20260507T172251, end_date=20260507T172257
+[2026-05-07T17:22:57.548+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2026-05-07T17:22:57.554+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 152 for task dbt_staging (Bash command failed. The command returned a non-zero exit code 2.; 97)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3006, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 274, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3161, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3185, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 768, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 734, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 276, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 2.
+[2026-05-07T17:22:57.619+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2026-05-07T17:22:57.654+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

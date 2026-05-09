@@ -1,0 +1,315 @@
+[2026-04-30T09:14:39.559+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-04-30T09:14:39.613+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: orders_kafka_to_s3.consume_orders manual__2026-04-30T09:14:34.339208+00:00 [queued]>
+[2026-04-30T09:14:39.634+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: orders_kafka_to_s3.consume_orders manual__2026-04-30T09:14:34.339208+00:00 [queued]>
+[2026-04-30T09:14:39.635+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2026-04-30T09:14:39.658+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): consume_orders> on 2026-04-30 09:14:34.339208+00:00
+[2026-04-30T09:14:39.669+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=866) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-04-30T09:14:39.673+0000] {standard_task_runner.py:72} INFO - Started process 867 to run task
+[2026-04-30T09:14:39.673+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'orders_kafka_to_s3', 'consume_orders', 'manual__2026-04-30T09:14:34.339208+00:00', '--job-id', '14', '--raw', '--subdir', 'DAGS_FOLDER/main.py', '--cfg-path', '/tmp/tmpug_f1yqs']
+[2026-04-30T09:14:39.675+0000] {standard_task_runner.py:105} INFO - Job 14: Subtask consume_orders
+[2026-04-30T09:14:39.764+0000] {task_command.py:467} INFO - Running <TaskInstance: orders_kafka_to_s3.consume_orders manual__2026-04-30T09:14:34.339208+00:00 [running]> on host 2060b8b3abe6
+[2026-04-30T09:14:39.873+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='kafka_streaming' AIRFLOW_CTX_DAG_ID='orders_kafka_to_s3' AIRFLOW_CTX_TASK_ID='consume_orders' AIRFLOW_CTX_EXECUTION_DATE='2026-04-30T09:14:34.339208+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-04-30T09:14:34.339208+00:00'
+[2026-04-30T09:14:39.874+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2026-04-30T09:14:39.917+0000] {base.py:84} INFO - Retrieving connection 'aws_default'
+[2026-04-30T09:14:40.123+0000] {consumer.py:177} INFO - Consumer started. batch_size=8  batch_timeout=30s  idle_exit=30s
+[2026-04-30T09:14:43.212+0000] {consumer.py:212} INFO - Flushing batch #0000 (8 rows) — size
+[2026-04-30T09:14:45.931+0000] {consumer.py:145} ERROR - S3 upload failed for batch #0000: An error occurred (AccessDenied) when calling the PutObject operation: User: arn:aws:iam::081653452945:user/kafka-s3-connect is not authorized to perform: s3:PutObject on resource: "arn:aws:s3:::streamstore-081653452945-ap-south-1-an/streamstore/year=2026/month=04/day=30/batch_20260430_091443_0000.csv" because no identity-based policy allows the s3:PutObject action
+[2026-04-30T09:14:45.933+0000] {consumer.py:222} WARNING - Retaining batch — will retry on next flush.
+[2026-04-30T09:14:45.934+0000] {consumer.py:212} INFO - Flushing batch #0000 (9 rows) — size
+[2026-04-30T09:14:47.513+0000] {consumer.py:145} ERROR - S3 upload failed for batch #0000: An error occurred (AccessDenied) when calling the PutObject operation: User: arn:aws:iam::081653452945:user/kafka-s3-connect is not authorized to perform: s3:PutObject on resource: "arn:aws:s3:::streamstore-081653452945-ap-south-1-an/streamstore/year=2026/month=04/day=30/batch_20260430_091445_0000.csv" because no identity-based policy allows the s3:PutObject action
+[2026-04-30T09:14:47.516+0000] {consumer.py:222} WARNING - Retaining batch — will retry on next flush.
+[2026-04-30T09:14:47.517+0000] {consumer.py:212} INFO - Flushing batch #0000 (10 rows) — size
+[2026-04-30T09:14:49.399+0000] {consumer.py:145} ERROR - S3 upload failed for batch #0000: An error occurred (AccessDenied) when calling the PutObject operation: User: arn:aws:iam::081653452945:user/kafka-s3-connect is not authorized to perform: s3:PutObject on resource: "arn:aws:s3:::streamstore-081653452945-ap-south-1-an/streamstore/year=2026/month=04/day=30/batch_20260430_091447_0000.csv" because no identity-based policy allows the s3:PutObject action
+[2026-04-30T09:14:49.400+0000] {consumer.py:222} WARNING - Retaining batch — will retry on next flush.
+[2026-04-30T09:14:49.401+0000] {consumer.py:212} INFO - Flushing batch #0000 (11 rows) — size
+[2026-04-30T09:14:49.181+0000] {consumer.py:145} ERROR - S3 upload failed for batch #0000: An error occurred (AccessDenied) when calling the PutObject operation: User: arn:aws:iam::081653452945:user/kafka-s3-connect is not authorized to perform: s3:PutObject on resource: "arn:aws:s3:::streamstore-081653452945-ap-south-1-an/streamstore/year=2026/month=04/day=30/batch_20260430_091449_0000.csv" because no identity-based policy allows the s3:PutObject action
+[2026-04-30T09:14:49.184+0000] {consumer.py:222} WARNING - Retaining batch — will retry on next flush.
+[2026-04-30T09:14:49.189+0000] {consumer.py:212} INFO - Flushing batch #0000 (12 rows) — size
+[2026-04-30T09:14:52.122+0000] {consumer.py:145} ERROR - S3 upload failed for batch #0000: An error occurred (AccessDenied) when calling the PutObject operation: User: arn:aws:iam::081653452945:user/kafka-s3-connect is not authorized to perform: s3:PutObject on resource: "arn:aws:s3:::streamstore-081653452945-ap-south-1-an/streamstore/year=2026/month=04/day=30/batch_20260430_091449_0000.csv" because no identity-based policy allows the s3:PutObject action
+[2026-04-30T09:14:52.125+0000] {consumer.py:222} WARNING - Retaining batch — will retry on next flush.
+[2026-04-30T09:14:52.131+0000] {consumer.py:212} INFO - Flushing batch #0000 (13 rows) — size
+[2026-04-30T09:14:54.246+0000] {consumer.py:145} ERROR - S3 upload failed for batch #0000: An error occurred (AccessDenied) when calling the PutObject operation: User: arn:aws:iam::081653452945:user/kafka-s3-connect is not authorized to perform: s3:PutObject on resource: "arn:aws:s3:::streamstore-081653452945-ap-south-1-an/streamstore/year=2026/month=04/day=30/batch_20260430_091452_0000.csv" because no identity-based policy allows the s3:PutObject action
+[2026-04-30T09:14:54.250+0000] {consumer.py:222} WARNING - Retaining batch — will retry on next flush.
+[2026-04-30T09:14:54.253+0000] {consumer.py:212} INFO - Flushing batch #0000 (14 rows) — size
+[2026-04-30T09:14:56.646+0000] {consumer.py:145} ERROR - S3 upload failed for batch #0000: An error occurred (AccessDenied) when calling the PutObject operation: User: arn:aws:iam::081653452945:user/kafka-s3-connect is not authorized to perform: s3:PutObject on resource: "arn:aws:s3:::streamstore-081653452945-ap-south-1-an/streamstore/year=2026/month=04/day=30/batch_20260430_091454_0000.csv" because no identity-based policy allows the s3:PutObject action
+[2026-04-30T09:14:56.649+0000] {consumer.py:222} WARNING - Retaining batch — will retry on next flush.
+[2026-04-30T09:14:56.650+0000] {consumer.py:212} INFO - Flushing batch #0000 (15 rows) — size
+[2026-04-30T09:14:58.251+0000] {consumer.py:145} ERROR - S3 upload failed for batch #0000: An error occurred (AccessDenied) when calling the PutObject operation: User: arn:aws:iam::081653452945:user/kafka-s3-connect is not authorized to perform: s3:PutObject on resource: "arn:aws:s3:::streamstore-081653452945-ap-south-1-an/streamstore/year=2026/month=04/day=30/batch_20260430_091456_0000.csv" because no identity-based policy allows the s3:PutObject action
+[2026-04-30T09:14:58.254+0000] {consumer.py:222} WARNING - Retaining batch — will retry on next flush.
+[2026-04-30T09:14:58.256+0000] {consumer.py:212} INFO - Flushing batch #0000 (16 rows) — size
+[2026-04-30T09:15:00.084+0000] {consumer.py:145} ERROR - S3 upload failed for batch #0000: An error occurred (AccessDenied) when calling the PutObject operation: User: arn:aws:iam::081653452945:user/kafka-s3-connect is not authorized to perform: s3:PutObject on resource: "arn:aws:s3:::streamstore-081653452945-ap-south-1-an/streamstore/year=2026/month=04/day=30/batch_20260430_091458_0000.csv" because no identity-based policy allows the s3:PutObject action
+[2026-04-30T09:15:00.097+0000] {consumer.py:222} WARNING - Retaining batch — will retry on next flush.
+[2026-04-30T09:15:00.099+0000] {consumer.py:212} INFO - Flushing batch #0000 (17 rows) — size
+[2026-04-30T09:15:02.664+0000] {consumer.py:145} ERROR - S3 upload failed for batch #0000: An error occurred (AccessDenied) when calling the PutObject operation: User: arn:aws:iam::081653452945:user/kafka-s3-connect is not authorized to perform: s3:PutObject on resource: "arn:aws:s3:::streamstore-081653452945-ap-south-1-an/streamstore/year=2026/month=04/day=30/batch_20260430_091500_0000.csv" because no identity-based policy allows the s3:PutObject action
+[2026-04-30T09:15:02.668+0000] {consumer.py:222} WARNING - Retaining batch — will retry on next flush.
+[2026-04-30T09:15:02.672+0000] {consumer.py:212} INFO - Flushing batch #0000 (18 rows) — size
+[2026-04-30T09:15:03.130+0000] {consumer.py:145} ERROR - S3 upload failed for batch #0000: An error occurred (AccessDenied) when calling the PutObject operation: User: arn:aws:iam::081653452945:user/kafka-s3-connect is not authorized to perform: s3:PutObject on resource: "arn:aws:s3:::streamstore-081653452945-ap-south-1-an/streamstore/year=2026/month=04/day=30/batch_20260430_091502_0000.csv" because no identity-based policy allows the s3:PutObject action
+[2026-04-30T09:15:03.133+0000] {consumer.py:222} WARNING - Retaining batch — will retry on next flush.
+[2026-04-30T09:15:03.137+0000] {consumer.py:212} INFO - Flushing batch #0000 (19 rows) — size
+[2026-04-30T09:15:04.929+0000] {consumer.py:145} ERROR - S3 upload failed for batch #0000: An error occurred (AccessDenied) when calling the PutObject operation: User: arn:aws:iam::081653452945:user/kafka-s3-connect is not authorized to perform: s3:PutObject on resource: "arn:aws:s3:::streamstore-081653452945-ap-south-1-an/streamstore/year=2026/month=04/day=30/batch_20260430_091503_0000.csv" because no identity-based policy allows the s3:PutObject action
+[2026-04-30T09:15:04.931+0000] {consumer.py:222} WARNING - Retaining batch — will retry on next flush.
+[2026-04-30T09:15:04.931+0000] {consumer.py:212} INFO - Flushing batch #0000 (20 rows) — size
+[2026-04-30T09:15:07.039+0000] {consumer.py:145} ERROR - S3 upload failed for batch #0000: An error occurred (AccessDenied) when calling the PutObject operation: User: arn:aws:iam::081653452945:user/kafka-s3-connect is not authorized to perform: s3:PutObject on resource: "arn:aws:s3:::streamstore-081653452945-ap-south-1-an/streamstore/year=2026/month=04/day=30/batch_20260430_091504_0000.csv" because no identity-based policy allows the s3:PutObject action
+[2026-04-30T09:15:07.043+0000] {consumer.py:222} WARNING - Retaining batch — will retry on next flush.
+[2026-04-30T09:15:07.046+0000] {consumer.py:212} INFO - Flushing batch #0000 (21 rows) — size
+[2026-04-30T09:15:08.937+0000] {consumer.py:145} ERROR - S3 upload failed for batch #0000: An error occurred (AccessDenied) when calling the PutObject operation: User: arn:aws:iam::081653452945:user/kafka-s3-connect is not authorized to perform: s3:PutObject on resource: "arn:aws:s3:::streamstore-081653452945-ap-south-1-an/streamstore/year=2026/month=04/day=30/batch_20260430_091507_0000.csv" because no identity-based policy allows the s3:PutObject action
+[2026-04-30T09:15:08.939+0000] {consumer.py:222} WARNING - Retaining batch — will retry on next flush.
+[2026-04-30T09:15:08.941+0000] {consumer.py:212} INFO - Flushing batch #0000 (22 rows) — size
+[2026-04-30T09:15:12.326+0000] {consumer.py:145} ERROR - S3 upload failed for batch #0000: An error occurred (AccessDenied) when calling the PutObject operation: User: arn:aws:iam::081653452945:user/kafka-s3-connect is not authorized to perform: s3:PutObject on resource: "arn:aws:s3:::streamstore-081653452945-ap-south-1-an/streamstore/year=2026/month=04/day=30/batch_20260430_091508_0000.csv" because no identity-based policy allows the s3:PutObject action
+[2026-04-30T09:15:12.328+0000] {consumer.py:222} WARNING - Retaining batch — will retry on next flush.
+[2026-04-30T09:15:12.330+0000] {consumer.py:212} INFO - Flushing batch #0000 (23 rows) — size
+[2026-04-30T09:15:15.018+0000] {consumer.py:145} ERROR - S3 upload failed for batch #0000: An error occurred (AccessDenied) when calling the PutObject operation: User: arn:aws:iam::081653452945:user/kafka-s3-connect is not authorized to perform: s3:PutObject on resource: "arn:aws:s3:::streamstore-081653452945-ap-south-1-an/streamstore/year=2026/month=04/day=30/batch_20260430_091512_0000.csv" because no identity-based policy allows the s3:PutObject action
+[2026-04-30T09:15:15.026+0000] {consumer.py:222} WARNING - Retaining batch — will retry on next flush.
+[2026-04-30T09:15:15.029+0000] {consumer.py:212} INFO - Flushing batch #0000 (24 rows) — size
+[2026-04-30T09:15:17.400+0000] {consumer.py:145} ERROR - S3 upload failed for batch #0000: An error occurred (AccessDenied) when calling the PutObject operation: User: arn:aws:iam::081653452945:user/kafka-s3-connect is not authorized to perform: s3:PutObject on resource: "arn:aws:s3:::streamstore-081653452945-ap-south-1-an/streamstore/year=2026/month=04/day=30/batch_20260430_091515_0000.csv" because no identity-based policy allows the s3:PutObject action
+[2026-04-30T09:15:17.401+0000] {consumer.py:222} WARNING - Retaining batch — will retry on next flush.
+[2026-04-30T09:15:17.402+0000] {consumer.py:212} INFO - Flushing batch #0000 (25 rows) — size
+[2026-04-30T09:15:18.864+0000] {consumer.py:145} ERROR - S3 upload failed for batch #0000: An error occurred (AccessDenied) when calling the PutObject operation: User: arn:aws:iam::081653452945:user/kafka-s3-connect is not authorized to perform: s3:PutObject on resource: "arn:aws:s3:::streamstore-081653452945-ap-south-1-an/streamstore/year=2026/month=04/day=30/batch_20260430_091517_0000.csv" because no identity-based policy allows the s3:PutObject action
+[2026-04-30T09:15:18.865+0000] {consumer.py:222} WARNING - Retaining batch — will retry on next flush.
+[2026-04-30T09:15:18.866+0000] {consumer.py:212} INFO - Flushing batch #0000 (26 rows) — size
+[2026-04-30T09:15:21.627+0000] {consumer.py:145} ERROR - S3 upload failed for batch #0000: An error occurred (AccessDenied) when calling the PutObject operation: User: arn:aws:iam::081653452945:user/kafka-s3-connect is not authorized to perform: s3:PutObject on resource: "arn:aws:s3:::streamstore-081653452945-ap-south-1-an/streamstore/year=2026/month=04/day=30/batch_20260430_091518_0000.csv" because no identity-based policy allows the s3:PutObject action
+[2026-04-30T09:15:21.629+0000] {consumer.py:222} WARNING - Retaining batch — will retry on next flush.
+[2026-04-30T09:15:21.630+0000] {consumer.py:212} INFO - Flushing batch #0000 (27 rows) — size
+[2026-04-30T09:15:24.656+0000] {consumer.py:145} ERROR - S3 upload failed for batch #0000: An error occurred (AccessDenied) when calling the PutObject operation: User: arn:aws:iam::081653452945:user/kafka-s3-connect is not authorized to perform: s3:PutObject on resource: "arn:aws:s3:::streamstore-081653452945-ap-south-1-an/streamstore/year=2026/month=04/day=30/batch_20260430_091521_0000.csv" because no identity-based policy allows the s3:PutObject action
+[2026-04-30T09:15:24.660+0000] {consumer.py:222} WARNING - Retaining batch — will retry on next flush.
+[2026-04-30T09:15:24.663+0000] {consumer.py:212} INFO - Flushing batch #0000 (28 rows) — size
+[2026-04-30T09:15:27.145+0000] {consumer.py:145} ERROR - S3 upload failed for batch #0000: An error occurred (AccessDenied) when calling the PutObject operation: User: arn:aws:iam::081653452945:user/kafka-s3-connect is not authorized to perform: s3:PutObject on resource: "arn:aws:s3:::streamstore-081653452945-ap-south-1-an/streamstore/year=2026/month=04/day=30/batch_20260430_091524_0000.csv" because no identity-based policy allows the s3:PutObject action
+[2026-04-30T09:15:27.147+0000] {consumer.py:222} WARNING - Retaining batch — will retry on next flush.
+[2026-04-30T09:15:27.148+0000] {consumer.py:212} INFO - Flushing batch #0000 (29 rows) — size
+[2026-04-30T09:15:29.799+0000] {consumer.py:145} ERROR - S3 upload failed for batch #0000: An error occurred (AccessDenied) when calling the PutObject operation: User: arn:aws:iam::081653452945:user/kafka-s3-connect is not authorized to perform: s3:PutObject on resource: "arn:aws:s3:::streamstore-081653452945-ap-south-1-an/streamstore/year=2026/month=04/day=30/batch_20260430_091527_0000.csv" because no identity-based policy allows the s3:PutObject action
+[2026-04-30T09:15:29.801+0000] {consumer.py:222} WARNING - Retaining batch — will retry on next flush.
+[2026-04-30T09:15:29.803+0000] {consumer.py:212} INFO - Flushing batch #0000 (30 rows) — size
+[2026-04-30T09:15:32.055+0000] {consumer.py:145} ERROR - S3 upload failed for batch #0000: An error occurred (AccessDenied) when calling the PutObject operation: User: arn:aws:iam::081653452945:user/kafka-s3-connect is not authorized to perform: s3:PutObject on resource: "arn:aws:s3:::streamstore-081653452945-ap-south-1-an/streamstore/year=2026/month=04/day=30/batch_20260430_091529_0000.csv" because no identity-based policy allows the s3:PutObject action
+[2026-04-30T09:15:32.059+0000] {consumer.py:222} WARNING - Retaining batch — will retry on next flush.
+[2026-04-30T09:15:32.063+0000] {consumer.py:212} INFO - Flushing batch #0000 (31 rows) — size
+[2026-04-30T09:15:34.551+0000] {consumer.py:145} ERROR - S3 upload failed for batch #0000: An error occurred (AccessDenied) when calling the PutObject operation: User: arn:aws:iam::081653452945:user/kafka-s3-connect is not authorized to perform: s3:PutObject on resource: "arn:aws:s3:::streamstore-081653452945-ap-south-1-an/streamstore/year=2026/month=04/day=30/batch_20260430_091532_0000.csv" because no identity-based policy allows the s3:PutObject action
+[2026-04-30T09:15:34.552+0000] {consumer.py:222} WARNING - Retaining batch — will retry on next flush.
+[2026-04-30T09:15:34.553+0000] {consumer.py:212} INFO - Flushing batch #0000 (32 rows) — size
+[2026-04-30T09:15:38.216+0000] {consumer.py:145} ERROR - S3 upload failed for batch #0000: An error occurred (AccessDenied) when calling the PutObject operation: User: arn:aws:iam::081653452945:user/kafka-s3-connect is not authorized to perform: s3:PutObject on resource: "arn:aws:s3:::streamstore-081653452945-ap-south-1-an/streamstore/year=2026/month=04/day=30/batch_20260430_091534_0000.csv" because no identity-based policy allows the s3:PutObject action
+[2026-04-30T09:15:38.218+0000] {consumer.py:222} WARNING - Retaining batch — will retry on next flush.
+[2026-04-30T09:15:38.220+0000] {consumer.py:212} INFO - Flushing batch #0000 (33 rows) — size
+[2026-04-30T09:15:40.381+0000] {consumer.py:145} ERROR - S3 upload failed for batch #0000: An error occurred (AccessDenied) when calling the PutObject operation: User: arn:aws:iam::081653452945:user/kafka-s3-connect is not authorized to perform: s3:PutObject on resource: "arn:aws:s3:::streamstore-081653452945-ap-south-1-an/streamstore/year=2026/month=04/day=30/batch_20260430_091538_0000.csv" because no identity-based policy allows the s3:PutObject action
+[2026-04-30T09:15:40.383+0000] {consumer.py:222} WARNING - Retaining batch — will retry on next flush.
+[2026-04-30T09:15:40.384+0000] {consumer.py:212} INFO - Flushing batch #0000 (34 rows) — size
+[2026-04-30T09:15:43.385+0000] {consumer.py:145} ERROR - S3 upload failed for batch #0000: An error occurred (AccessDenied) when calling the PutObject operation: User: arn:aws:iam::081653452945:user/kafka-s3-connect is not authorized to perform: s3:PutObject on resource: "arn:aws:s3:::streamstore-081653452945-ap-south-1-an/streamstore/year=2026/month=04/day=30/batch_20260430_091540_0000.csv" because no identity-based policy allows the s3:PutObject action
+[2026-04-30T09:15:43.387+0000] {consumer.py:222} WARNING - Retaining batch — will retry on next flush.
+[2026-04-30T09:15:43.388+0000] {consumer.py:212} INFO - Flushing batch #0000 (35 rows) — size
+[2026-04-30T09:15:47.124+0000] {consumer.py:145} ERROR - S3 upload failed for batch #0000: An error occurred (AccessDenied) when calling the PutObject operation: User: arn:aws:iam::081653452945:user/kafka-s3-connect is not authorized to perform: s3:PutObject on resource: "arn:aws:s3:::streamstore-081653452945-ap-south-1-an/streamstore/year=2026/month=04/day=30/batch_20260430_091543_0000.csv" because no identity-based policy allows the s3:PutObject action
+[2026-04-30T09:15:47.128+0000] {consumer.py:222} WARNING - Retaining batch — will retry on next flush.
+[2026-04-30T09:15:47.130+0000] {consumer.py:212} INFO - Flushing batch #0000 (36 rows) — size
+[2026-04-30T09:15:49.786+0000] {consumer.py:145} ERROR - S3 upload failed for batch #0000: An error occurred (AccessDenied) when calling the PutObject operation: User: arn:aws:iam::081653452945:user/kafka-s3-connect is not authorized to perform: s3:PutObject on resource: "arn:aws:s3:::streamstore-081653452945-ap-south-1-an/streamstore/year=2026/month=04/day=30/batch_20260430_091547_0000.csv" because no identity-based policy allows the s3:PutObject action
+[2026-04-30T09:15:49.787+0000] {consumer.py:222} WARNING - Retaining batch — will retry on next flush.
+[2026-04-30T09:15:49.788+0000] {consumer.py:212} INFO - Flushing batch #0000 (37 rows) — size
+[2026-04-30T09:15:51.819+0000] {consumer.py:145} ERROR - S3 upload failed for batch #0000: An error occurred (AccessDenied) when calling the PutObject operation: User: arn:aws:iam::081653452945:user/kafka-s3-connect is not authorized to perform: s3:PutObject on resource: "arn:aws:s3:::streamstore-081653452945-ap-south-1-an/streamstore/year=2026/month=04/day=30/batch_20260430_091549_0000.csv" because no identity-based policy allows the s3:PutObject action
+[2026-04-30T09:15:51.823+0000] {consumer.py:222} WARNING - Retaining batch — will retry on next flush.
+[2026-04-30T09:15:51.827+0000] {consumer.py:212} INFO - Flushing batch #0000 (38 rows) — size
+[2026-04-30T09:15:53.626+0000] {consumer.py:145} ERROR - S3 upload failed for batch #0000: An error occurred (AccessDenied) when calling the PutObject operation: User: arn:aws:iam::081653452945:user/kafka-s3-connect is not authorized to perform: s3:PutObject on resource: "arn:aws:s3:::streamstore-081653452945-ap-south-1-an/streamstore/year=2026/month=04/day=30/batch_20260430_091551_0000.csv" because no identity-based policy allows the s3:PutObject action
+[2026-04-30T09:15:53.627+0000] {consumer.py:222} WARNING - Retaining batch — will retry on next flush.
+[2026-04-30T09:15:53.629+0000] {consumer.py:212} INFO - Flushing batch #0000 (39 rows) — size
+[2026-04-30T09:15:56.805+0000] {consumer.py:145} ERROR - S3 upload failed for batch #0000: An error occurred (AccessDenied) when calling the PutObject operation: User: arn:aws:iam::081653452945:user/kafka-s3-connect is not authorized to perform: s3:PutObject on resource: "arn:aws:s3:::streamstore-081653452945-ap-south-1-an/streamstore/year=2026/month=04/day=30/batch_20260430_091553_0000.csv" because no identity-based policy allows the s3:PutObject action
+[2026-04-30T09:15:56.807+0000] {consumer.py:222} WARNING - Retaining batch — will retry on next flush.
+[2026-04-30T09:15:56.808+0000] {consumer.py:212} INFO - Flushing batch #0000 (40 rows) — size
+[2026-04-30T09:15:58.515+0000] {consumer.py:145} ERROR - S3 upload failed for batch #0000: An error occurred (AccessDenied) when calling the PutObject operation: User: arn:aws:iam::081653452945:user/kafka-s3-connect is not authorized to perform: s3:PutObject on resource: "arn:aws:s3:::streamstore-081653452945-ap-south-1-an/streamstore/year=2026/month=04/day=30/batch_20260430_091556_0000.csv" because no identity-based policy allows the s3:PutObject action
+[2026-04-30T09:15:58.517+0000] {consumer.py:222} WARNING - Retaining batch — will retry on next flush.
+[2026-04-30T09:15:59.526+0000] {consumer.py:212} INFO - Flushing batch #0000 (40 rows) — size
+[2026-04-30T09:16:01.278+0000] {consumer.py:145} ERROR - S3 upload failed for batch #0000: An error occurred (AccessDenied) when calling the PutObject operation: User: arn:aws:iam::081653452945:user/kafka-s3-connect is not authorized to perform: s3:PutObject on resource: "arn:aws:s3:::streamstore-081653452945-ap-south-1-an/streamstore/year=2026/month=04/day=30/batch_20260430_091559_0000.csv" because no identity-based policy allows the s3:PutObject action
+[2026-04-30T09:16:01.280+0000] {consumer.py:222} WARNING - Retaining batch — will retry on next flush.
+[2026-04-30T09:16:02.284+0000] {consumer.py:212} INFO - Flushing batch #0000 (40 rows) — size
+[2026-04-30T09:16:05.524+0000] {consumer.py:145} ERROR - S3 upload failed for batch #0000: An error occurred (AccessDenied) when calling the PutObject operation: User: arn:aws:iam::081653452945:user/kafka-s3-connect is not authorized to perform: s3:PutObject on resource: "arn:aws:s3:::streamstore-081653452945-ap-south-1-an/streamstore/year=2026/month=04/day=30/batch_20260430_091602_0000.csv" because no identity-based policy allows the s3:PutObject action
+[2026-04-30T09:16:05.528+0000] {consumer.py:222} WARNING - Retaining batch — will retry on next flush.
+[2026-04-30T09:16:06.532+0000] {consumer.py:212} INFO - Flushing batch #0000 (40 rows) — size
+[2026-04-30T09:16:08.265+0000] {consumer.py:145} ERROR - S3 upload failed for batch #0000: An error occurred (AccessDenied) when calling the PutObject operation: User: arn:aws:iam::081653452945:user/kafka-s3-connect is not authorized to perform: s3:PutObject on resource: "arn:aws:s3:::streamstore-081653452945-ap-south-1-an/streamstore/year=2026/month=04/day=30/batch_20260430_091606_0000.csv" because no identity-based policy allows the s3:PutObject action
+[2026-04-30T09:16:08.267+0000] {consumer.py:222} WARNING - Retaining batch — will retry on next flush.
+[2026-04-30T09:16:09.275+0000] {consumer.py:212} INFO - Flushing batch #0000 (40 rows) — size
+[2026-04-30T09:16:10.784+0000] {local_task_job_runner.py:346} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2026-04-30T09:16:10.786+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-04-30T09:16:10.810+0000] {process_utils.py:132} INFO - Sending 15 to group 867. PIDs of all processes in the group: [867]
+[2026-04-30T09:16:10.816+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 867
+[2026-04-30T09:16:10.819+0000] {taskinstance.py:3094} ERROR - Received SIGTERM. Terminating subprocesses.
+[2026-04-30T09:16:10.872+0000] {taskinstance.py:3095} ERROR - Stacktrace: 
+  File "/home/***/.local/bin/***", line 8, in <module>
+    sys.exit(main())
+  File "/home/***/.local/lib/python3.12/site-packages/***/__main__.py", line 62, in main
+    args.func(args)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/providers/celery/cli/celery_command.py", line 64, in wrapper
+    providers_configuration_loaded(func)(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/providers_configuration_loader.py", line 55, in wrapped_function
+    return func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/providers/celery/cli/celery_command.py", line 237, in worker
+    _run_command_with_daemon_option(
+  File "/home/***/.local/lib/python3.12/site-packages/***/providers/celery/cli/celery_command.py", line 50, in _run_command_with_daemon_option
+    run_command_with_daemon_option(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/daemon_utils.py", line 86, in run_command_with_daemon_option
+    callback()
+  File "/home/***/.local/lib/python3.12/site-packages/***/providers/celery/cli/celery_command.py", line 230, in run_celery_worker
+    celery_app.worker_main(options)
+  File "/home/***/.local/lib/python3.12/site-packages/celery/app/base.py", line 391, in worker_main
+    self.start(argv=argv)
+  File "/home/***/.local/lib/python3.12/site-packages/celery/app/base.py", line 371, in start
+    celery.main(args=argv, standalone_mode=False)
+  File "/home/***/.local/lib/python3.12/site-packages/click/core.py", line 1082, in main
+    rv = self.invoke(ctx)
+  File "/home/***/.local/lib/python3.12/site-packages/click/core.py", line 1697, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/***/.local/lib/python3.12/site-packages/click/core.py", line 1443, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/***/.local/lib/python3.12/site-packages/click/core.py", line 788, in invoke
+    return __callback(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/click/decorators.py", line 33, in new_func
+    return f(get_current_context(), *args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/celery/bin/base.py", line 135, in caller
+    return f(ctx, *args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/celery/bin/worker.py", line 356, in worker
+    worker.start()
+  File "/home/***/.local/lib/python3.12/site-packages/celery/worker/worker.py", line 202, in start
+    self.blueprint.start(self)
+  File "/home/***/.local/lib/python3.12/site-packages/celery/bootsteps.py", line 116, in start
+    step.start(parent)
+  File "/home/***/.local/lib/python3.12/site-packages/celery/bootsteps.py", line 365, in start
+    return self.obj.start()
+  File "/home/***/.local/lib/python3.12/site-packages/celery/concurrency/base.py", line 130, in start
+    self.on_start()
+  File "/home/***/.local/lib/python3.12/site-packages/celery/concurrency/prefork.py", line 109, in on_start
+    P = self._pool = Pool(processes=self.limit,
+  File "/home/***/.local/lib/python3.12/site-packages/celery/concurrency/asynpool.py", line 464, in __init__
+    super().__init__(processes, *args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/billiard/pool.py", line 1046, in __init__
+    self._create_worker_process(i)
+  File "/home/***/.local/lib/python3.12/site-packages/celery/concurrency/asynpool.py", line 482, in _create_worker_process
+    return super()._create_worker_process(i)
+  File "/home/***/.local/lib/python3.12/site-packages/billiard/pool.py", line 1158, in _create_worker_process
+    w.start()
+  File "/home/***/.local/lib/python3.12/site-packages/billiard/process.py", line 120, in start
+    self._popen = self._Popen(self)
+  File "/home/***/.local/lib/python3.12/site-packages/billiard/context.py", line 331, in _Popen
+    return Popen(process_obj)
+  File "/home/***/.local/lib/python3.12/site-packages/billiard/popen_fork.py", line 22, in __init__
+    self._launch(process_obj)
+  File "/home/***/.local/lib/python3.12/site-packages/billiard/popen_fork.py", line 77, in _launch
+    code = process_obj._bootstrap()
+  File "/home/***/.local/lib/python3.12/site-packages/billiard/process.py", line 323, in _bootstrap
+    self.run()
+  File "/home/***/.local/lib/python3.12/site-packages/billiard/process.py", line 110, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/billiard/pool.py", line 292, in __call__
+    sys.exit(self.workloop(pid=pid))
+  File "/home/***/.local/lib/python3.12/site-packages/billiard/pool.py", line 362, in workloop
+    result = (True, prepare_result(fun(*args, **kwargs)))
+  File "/home/***/.local/lib/python3.12/site-packages/celery/app/trace.py", line 651, in fast_trace_task
+    R, I, T, Rstr = tasks[task].__trace__(
+  File "/home/***/.local/lib/python3.12/site-packages/celery/app/trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/celery/app/trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/providers/celery/executors/celery_executor_utils.py", line 139, in execute_command
+    _execute_in_fork(command_to_exec, celery_task_id)
+  File "/home/***/.local/lib/python3.12/site-packages/***/providers/celery/executors/celery_executor_utils.py", line 171, in _execute_in_fork
+    args.func(args)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 254, in _run_task_by_selected_method
+    return _run_task_by_local_task_job(args, ti)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 322, in _run_task_by_local_task_job
+    ret = run_job(job=job_runner.job, execute_callable=job_runner._execute)
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/jobs/job.py", line 421, in run_job
+    return execute_job(job, execute_callable=execute_callable)
+  File "/home/***/.local/lib/python3.12/site-packages/***/jobs/job.py", line 450, in execute_job
+    ret = execute_callable()
+  File "/home/***/.local/lib/python3.12/site-packages/***/jobs/local_task_job_runner.py", line 171, in _execute
+    self.task_runner.start()
+  File "/home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py", line 55, in start
+    self.process = self._start_by_fork()
+  File "/home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 3006, in _run_raw_task
+    return _run_raw_task(
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 274, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 3161, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 3185, in _execute_task
+    return _execute_task(self, context, task_orig)
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 763, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 734, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+  File "/home/***/.local/lib/python3.12/site-packages/***/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/opt/***/services/consumer.py", line 213, in consume_orders
+    key = _flush_to_s3(s3_client, bucket, batch, batch_id)
+  File "/opt/***/services/consumer.py", line 140, in _flush_to_s3
+    s3_client.put_object(Bucket=bucket, Key=key, Body=csv_bytes, ContentType="text/csv")
+  File "/home/***/.local/lib/python3.12/site-packages/botocore/client.py", line 569, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/botocore/client.py", line 1005, in _make_api_call
+    http, parsed_response = self._make_request(
+  File "/home/***/.local/lib/python3.12/site-packages/botocore/client.py", line 1029, in _make_request
+    return self._endpoint.make_request(operation_model, request_dict)
+  File "/home/***/.local/lib/python3.12/site-packages/botocore/endpoint.py", line 119, in make_request
+    return self._send_request(request_dict, operation_model)
+  File "/home/***/.local/lib/python3.12/site-packages/botocore/endpoint.py", line 197, in _send_request
+    success_response, exception = self._get_response(
+  File "/home/***/.local/lib/python3.12/site-packages/botocore/endpoint.py", line 239, in _get_response
+    success_response, exception = self._do_get_response(
+  File "/home/***/.local/lib/python3.12/site-packages/botocore/endpoint.py", line 279, in _do_get_response
+    http_response = self._send(request)
+  File "/home/***/.local/lib/python3.12/site-packages/botocore/endpoint.py", line 383, in _send
+    return self.http_session.send(request)
+  File "/home/***/.local/lib/python3.12/site-packages/botocore/httpsession.py", line 464, in send
+    urllib_response = conn.urlopen(
+  File "/home/***/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/home/***/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "/home/***/.local/lib/python3.12/site-packages/botocore/awsrequest.py", line 96, in request
+    rval = super().request(method, url, body, headers, *args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/urllib3/connection.py", line 445, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.12/http/client.py", line 1333, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/home/***/.local/lib/python3.12/site-packages/botocore/awsrequest.py", line 129, in _send_output
+    if urllib3.util.wait_for_read(self.sock, 1):
+  File "/home/***/.local/lib/python3.12/site-packages/urllib3/util/wait.py", line 117, in wait_for_read
+    return wait_for_socket(sock, read=True, timeout=timeout)
+  File "/home/***/.local/lib/python3.12/site-packages/urllib3/util/wait.py", line 79, in poll_wait_for_socket
+    return bool(do_poll(timeout))
+  File "/home/***/.local/lib/python3.12/site-packages/urllib3/util/wait.py", line 77, in do_poll
+    return poll_obj.poll(t)
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 3095, in signal_handler
+    self.log.error("Stacktrace: \n%s", "".join(traceback.format_stack()))
+
+[2026-04-30T09:16:10.888+0000] {consumer.py:238} INFO - Consumer done. rows=0  files=0
+[2026-04-30T09:16:10.988+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2026-04-30T09:16:11.039+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=867, status='terminated', exitcode=0, started='09:14:39') (867) terminated with exit code 0

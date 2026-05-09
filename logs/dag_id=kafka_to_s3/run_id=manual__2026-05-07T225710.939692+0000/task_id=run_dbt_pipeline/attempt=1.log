@@ -1,0 +1,99 @@
+[2026-05-07T22:58:01.880+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-05-07T22:58:01.911+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: kafka_to_s3.run_dbt_pipeline manual__2026-05-07T22:57:10.939692+00:00 [queued]>
+[2026-05-07T22:58:01.925+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: kafka_to_s3.run_dbt_pipeline manual__2026-05-07T22:57:10.939692+00:00 [queued]>
+[2026-05-07T22:58:01.927+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2026-05-07T22:58:01.946+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): run_dbt_pipeline> on 2026-05-07 22:57:10.939692+00:00
+[2026-05-07T22:58:01.959+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=3278) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-05-07T22:58:01.963+0000] {standard_task_runner.py:72} INFO - Started process 3279 to run task
+[2026-05-07T22:58:01.963+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'kafka_to_s3', 'run_dbt_pipeline', 'manual__2026-05-07T22:57:10.939692+00:00', '--job-id', '178', '--raw', '--subdir', 'DAGS_FOLDER/main.py', '--cfg-path', '/tmp/tmp6j_hw0h3']
+[2026-05-07T22:58:01.965+0000] {standard_task_runner.py:105} INFO - Job 178: Subtask run_dbt_pipeline
+[2026-05-07T22:58:02.072+0000] {task_command.py:467} INFO - Running <TaskInstance: kafka_to_s3.run_dbt_pipeline manual__2026-05-07T22:57:10.939692+00:00 [running]> on host d50ffedd74f8
+[2026-05-07T22:58:02.231+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='kafka_streaming' AIRFLOW_CTX_DAG_ID='kafka_to_s3' AIRFLOW_CTX_TASK_ID='run_dbt_pipeline' AIRFLOW_CTX_EXECUTION_DATE='2026-05-07T22:57:10.939692+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-05-07T22:57:10.939692+00:00'
+[2026-05-07T22:58:02.233+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2026-05-07T22:58:44.175+0000] {dbt_layers.py:27} INFO - [0m22:58:05  Running with dbt=1.8.9
+[0m22:58:06  [[33mWARNING[0m]: Deprecated functionality
+The `log-path` config in `dbt_project.yml` has been deprecated, and will no
+longer be supported in a future version of dbt-core. If you wish to write dbt
+logs to a custom directory, please use the --log-path CLI flag or DBT_LOG_PATH
+env var instead.
+[0m22:58:06  [[33mWARNING[0m]: Deprecated functionality
+The `target-path` config in `dbt_project.yml` has been deprecated, and will no
+longer be supported in a future version of dbt-core. If you wish to write dbt
+artifacts to a custom directory, please use the --target-path CLI flag or
+DBT_TARGET_PATH env var instead.
+[0m22:58:06  Registered adapter: redshift=1.8.1
+[0m22:58:07  Found 5 models, 499 macros
+[0m22:58:07  
+[0m22:58:24  Concurrency: 4 threads (target='dev')
+[0m22:58:24  
+[0m22:58:24  1 of 1 START sql view model stream_schema.stream_store_raw ..................... [RUN]
+[0m22:58:37  1 of 1 OK created sql view model stream_schema.stream_store_raw ................ [[32mSUCCESS[0m in 13.88s]
+[0m22:58:42  
+[0m22:58:42  Finished running 1 view model in 0 hours 0 minutes and 35.01 seconds (35.01s).
+[0m22:58:42  
+[0m22:58:42  [32mCompleted successfully[0m
+[0m22:58:42  
+[0m22:58:42  Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+
+[2026-05-07T22:59:24.927+0000] {dbt_layers.py:27} INFO - [0m22:58:47  Running with dbt=1.8.9
+[0m22:58:47  [[33mWARNING[0m]: Deprecated functionality
+The `log-path` config in `dbt_project.yml` has been deprecated, and will no
+longer be supported in a future version of dbt-core. If you wish to write dbt
+logs to a custom directory, please use the --log-path CLI flag or DBT_LOG_PATH
+env var instead.
+[0m22:58:47  [[33mWARNING[0m]: Deprecated functionality
+The `target-path` config in `dbt_project.yml` has been deprecated, and will no
+longer be supported in a future version of dbt-core. If you wish to write dbt
+artifacts to a custom directory, please use the --target-path CLI flag or
+DBT_TARGET_PATH env var instead.
+[0m22:58:47  Registered adapter: redshift=1.8.1
+[0m22:58:48  Found 5 models, 499 macros
+[0m22:58:48  
+[0m22:59:03  Concurrency: 4 threads (target='dev')
+[0m22:59:03  
+[0m22:59:03  1 of 1 START sql table model stream_schema.stream_store_stg .................... [RUN]
+[0m22:59:18  1 of 1 OK created sql table model stream_schema.stream_store_stg ............... [[32mSUCCESS[0m in 15.11s]
+[0m22:59:23  
+[0m22:59:23  Finished running 1 table model in 0 hours 0 minutes and 35.10 seconds (35.10s).
+[0m22:59:23  
+[0m22:59:23  [32mCompleted successfully[0m
+[0m22:59:23  
+[0m22:59:23  Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+
+[2026-05-07T23:00:14.856+0000] {dbt_layers.py:27} INFO - [0m22:59:27  Running with dbt=1.8.9
+[0m22:59:27  [[33mWARNING[0m]: Deprecated functionality
+The `log-path` config in `dbt_project.yml` has been deprecated, and will no
+longer be supported in a future version of dbt-core. If you wish to write dbt
+logs to a custom directory, please use the --log-path CLI flag or DBT_LOG_PATH
+env var instead.
+[0m22:59:27  [[33mWARNING[0m]: Deprecated functionality
+The `target-path` config in `dbt_project.yml` has been deprecated, and will no
+longer be supported in a future version of dbt-core. If you wish to write dbt
+artifacts to a custom directory, please use the --target-path CLI flag or
+DBT_TARGET_PATH env var instead.
+[0m22:59:28  Registered adapter: redshift=1.8.1
+[0m22:59:28  Found 5 models, 499 macros
+[0m22:59:28  
+[0m22:59:46  Concurrency: 4 threads (target='dev')
+[0m22:59:46  
+[0m22:59:46  1 of 3 START sql table model stream_schema.dim_customer ........................ [RUN]
+[0m22:59:46  2 of 3 START sql table model stream_schema.dim_product ......................... [RUN]
+[0m22:59:46  3 of 3 START sql table model stream_schema.fct_order ........................... [RUN]
+[0m23:00:01  3 of 3 OK created sql table model stream_schema.fct_order ...................... [[32mSUCCESS[0m in 15.19s]
+[0m23:00:01  2 of 3 OK created sql table model stream_schema.dim_product .................... [[32mSUCCESS[0m in 15.19s]
+[0m23:00:01  1 of 3 OK created sql table model stream_schema.dim_customer ................... [[32mSUCCESS[0m in 15.23s]
+[0m23:00:06  
+[0m23:00:06  Finished running 3 table models in 0 hours 0 minutes and 38.05 seconds (38.05s).
+[0m23:00:06  
+[0m23:00:06  [32mCompleted successfully[0m
+[0m23:00:06  
+[0m23:00:06  Done. PASS=3 WARN=0 ERROR=0 SKIP=0 TOTAL=3
+
+[2026-05-07T23:00:14.857+0000] {python.py:240} INFO - Done. Returned value was: None
+[2026-05-07T23:00:14.872+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2026-05-07T23:00:14.873+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=kafka_to_s3, task_id=run_dbt_pipeline, run_id=manual__2026-05-07T22:57:10.939692+00:00, execution_date=20260507T225710, start_date=20260507T225801, end_date=20260507T230014
+[2026-05-07T23:00:14.953+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-05-07T23:00:15.001+0000] {taskinstance.py:3901} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-05-07T23:00:15.006+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

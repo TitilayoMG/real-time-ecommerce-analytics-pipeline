@@ -1,0 +1,26 @@
+[2026-05-01T21:45:34.384+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-05-01T21:45:34.434+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: orders_kafka_to_s3.consume_orders manual__2026-05-01T21:45:29.005492+00:00 [queued]>
+[2026-05-01T21:45:34.452+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: orders_kafka_to_s3.consume_orders manual__2026-05-01T21:45:29.005492+00:00 [queued]>
+[2026-05-01T21:45:34.454+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2026-05-01T21:45:34.476+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): consume_orders> on 2026-05-01 21:45:29.005492+00:00
+[2026-05-01T21:45:34.487+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=6912) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-05-01T21:45:34.491+0000] {standard_task_runner.py:72} INFO - Started process 6913 to run task
+[2026-05-01T21:45:34.491+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'orders_kafka_to_s3', 'consume_orders', 'manual__2026-05-01T21:45:29.005492+00:00', '--job-id', '61', '--raw', '--subdir', 'DAGS_FOLDER/main.py', '--cfg-path', '/tmp/tmpw60_nqlr']
+[2026-05-01T21:45:34.493+0000] {standard_task_runner.py:105} INFO - Job 61: Subtask consume_orders
+[2026-05-01T21:45:34.586+0000] {task_command.py:467} INFO - Running <TaskInstance: orders_kafka_to_s3.consume_orders manual__2026-05-01T21:45:29.005492+00:00 [running]> on host cc69f44e695c
+[2026-05-01T21:45:34.746+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='kafka_streaming' AIRFLOW_CTX_DAG_ID='orders_kafka_to_s3' AIRFLOW_CTX_TASK_ID='consume_orders' AIRFLOW_CTX_EXECUTION_DATE='2026-05-01T21:45:29.005492+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-05-01T21:45:29.005492+00:00'
+[2026-05-01T21:45:34.748+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2026-05-01T21:45:34.782+0000] {base.py:84} INFO - Retrieving connection 'aws_default'
+[2026-05-01T21:45:35.009+0000] {consumer.py:186} INFO - Consumer started. batch_size=8  batch_timeout=30s  idle_exit=30s
+[2026-05-01T21:45:38.040+0000] {consumer.py:222} INFO - Flushing batch #0000 (8 rows) — size
+[2026-05-01T21:45:39.859+0000] {consumer.py:150} INFO - ✔ Batch #0000 → s3://streamstore-081653452945-ap-south-1-an/streamstore/year_2026_month_05_day_01_batch_20260501_214538_0000.csv  (8 rows, 0.4 KB)
+[2026-05-01T21:46:11.972+0000] {consumer.py:213} INFO - Idle for 30s — exiting.
+[2026-05-01T21:46:11.987+0000] {consumer.py:257} INFO - Consumer done. rows=8  files=1
+[2026-05-01T21:46:12.001+0000] {python.py:240} INFO - Done. Returned value was: {'total_rows': 8, 'total_files': 1}
+[2026-05-01T21:46:12.056+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2026-05-01T21:46:12.058+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=orders_kafka_to_s3, task_id=consume_orders, run_id=manual__2026-05-01T21:45:29.005492+00:00, execution_date=20260501T214529, start_date=20260501T214534, end_date=20260501T214612
+[2026-05-01T21:46:12.176+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-05-01T21:46:12.216+0000] {taskinstance.py:3901} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-05-01T21:46:12.220+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

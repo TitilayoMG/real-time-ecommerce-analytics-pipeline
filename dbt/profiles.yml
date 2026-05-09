@@ -1,0 +1,12 @@
+dbt_streamstore:
+  outputs:
+    dev:
+      dbname: dev
+      host: default-workgroup.081653452945.ap-south-1.redshift-serverless.amazonaws.com
+      password: LOPKmrzjb132%%
+      port: 5439
+      schema: stream_schema
+      threads: 4
+      type: redshift
+      user: admin
+  target: dev

@@ -1,0 +1,108 @@
+[0m17:42:49.792872 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c77a53270e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c77a52a3d10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c77a597a270>]}
+
+
+============================== 17:42:49.804137 | e8669ad5-cf2b-41e5-8fa8-205e206a60d2 ==============================
+[0m17:42:49.804137 [info ] [MainThread]: Running with dbt=1.8.9
+[0m17:42:49.806228 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/opt/airflow/dbt/logs', 'version_check': 'True', 'profiles_dir': '/opt/airflow/dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt run --select bronze --project-dir /opt/airflow/dbt --profiles-dir /opt/airflow/dbt', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m17:42:49.941511 [debug] [MainThread]: Redshift adapter: Setting redshift_connector to ERROR
+[0m17:42:49.942674 [debug] [MainThread]: Redshift adapter: Setting redshift_connector.core to ERROR
+[0m17:42:50.212611 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e8669ad5-cf2b-41e5-8fa8-205e206a60d2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c77a3fcc6b0>]}
+[0m17:42:50.286995 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'e8669ad5-cf2b-41e5-8fa8-205e206a60d2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c77a4cff980>]}
+[0m17:42:50.288347 [info ] [MainThread]: Registered adapter: redshift=1.8.1
+[0m17:42:50.447536 [debug] [MainThread]: checksum: 132857a23e9d07220246854f7763165174ce9b737cfc7867629ace4294e520b1, vars: {}, profile: , target: , version: 1.8.9
+[0m17:42:50.969876 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m17:42:50.971122 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m17:42:51.011490 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'e8669ad5-cf2b-41e5-8fa8-205e206a60d2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c77a59e97c0>]}
+[0m17:42:51.094480 [error] [MainThread]: Encountered an error:
+[Errno 13] Permission denied: '/opt/airflow/dbt/target/manifest.json'
+[0m17:42:51.100161 [error] [MainThread]: Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/dbt/cli/requires.py", line 138, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/dbt/cli/requires.py", line 101, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/dbt/cli/requires.py", line 218, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/dbt/cli/requires.py", line 247, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/dbt/cli/requires.py", line 294, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/dbt/cli/requires.py", line 320, in wrapper
+    ctx.obj["manifest"] = parse_manifest(
+                          ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/dbt/parser/manifest.py", line 1905, in parse_manifest
+    write_manifest(manifest, runtime_config.project_target_path)
+  File "/home/airflow/.local/lib/python3.12/site-packages/dbt/parser/manifest.py", line 1884, in write_manifest
+    manifest.write(path)
+  File "/home/airflow/.local/lib/python3.12/site-packages/dbt/contracts/graph/manifest.py", line 1162, in write
+    self.writable_manifest().write(path)
+  File "/home/airflow/.local/lib/python3.12/site-packages/dbt/artifacts/schemas/base.py", line 37, in write
+    write_json(path, self.to_dict(omit_none=False, context={"artifact": True}))  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/dbt_common/clients/system.py", line 305, in write_json
+    with open(path, "w", encoding="utf-8") as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: '/opt/airflow/dbt/target/manifest.json'
+
+[0m17:42:51.102830 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 1.4246285, "process_in_blocks": "0", "process_kernel_time": 0.457266, "process_mem_max_rss": "119508", "process_out_blocks": "0", "process_user_time": 3.6822}
+[0m17:42:51.104289 [debug] [MainThread]: Command `dbt run` failed at 17:42:51.104075 after 1.43 seconds
+[0m17:42:51.105549 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c77a5e32ea0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c77a3b90890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c77a3f79ca0>]}
+[0m17:42:51.106825 [debug] [MainThread]: Flushing usage events
+[0m22:12:45.800281 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x746d18b61010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x746d188ccb30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x746d17ab7410>]}
+
+
+============================== 22:12:45.816085 | a7544984-63d1-40ce-b65b-6809e113e7fa ==============================
+[0m22:12:45.816085 [info ] [MainThread]: Running with dbt=1.8.9
+[0m22:12:45.817694 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/opt/airflow/dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/opt/airflow/dbt/logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run --select bronze --project-dir /opt/airflow/dbt --profiles-dir /opt/airflow/dbt', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m22:12:46.056763 [debug] [MainThread]: Redshift adapter: Setting redshift_connector to ERROR
+[0m22:12:46.057744 [debug] [MainThread]: Redshift adapter: Setting redshift_connector.core to ERROR
+[0m22:12:46.354037 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a7544984-63d1-40ce-b65b-6809e113e7fa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x746d176e1640>]}
+[0m22:12:46.424314 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a7544984-63d1-40ce-b65b-6809e113e7fa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x746d178b4e00>]}
+[0m22:12:46.425943 [info ] [MainThread]: Registered adapter: redshift=1.8.1
+[0m22:12:46.560210 [debug] [MainThread]: checksum: 132857a23e9d07220246854f7763165174ce9b737cfc7867629ace4294e520b1, vars: {}, profile: , target: , version: 1.8.9
+[0m22:12:46.906736 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m22:12:46.907723 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m22:12:46.941431 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a7544984-63d1-40ce-b65b-6809e113e7fa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x746d16949640>]}
+[0m22:12:46.990681 [error] [MainThread]: Encountered an error:
+[Errno 13] Permission denied: '/opt/airflow/dbt/target/manifest.json'
+[0m22:12:46.996641 [error] [MainThread]: Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/dbt/cli/requires.py", line 138, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/dbt/cli/requires.py", line 101, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/dbt/cli/requires.py", line 218, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/dbt/cli/requires.py", line 247, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/dbt/cli/requires.py", line 294, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/dbt/cli/requires.py", line 320, in wrapper
+    ctx.obj["manifest"] = parse_manifest(
+                          ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/dbt/parser/manifest.py", line 1905, in parse_manifest
+    write_manifest(manifest, runtime_config.project_target_path)
+  File "/home/airflow/.local/lib/python3.12/site-packages/dbt/parser/manifest.py", line 1884, in write_manifest
+    manifest.write(path)
+  File "/home/airflow/.local/lib/python3.12/site-packages/dbt/contracts/graph/manifest.py", line 1162, in write
+    self.writable_manifest().write(path)
+  File "/home/airflow/.local/lib/python3.12/site-packages/dbt/artifacts/schemas/base.py", line 37, in write
+    write_json(path, self.to_dict(omit_none=False, context={"artifact": True}))  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/dbt_common/clients/system.py", line 305, in write_json
+    with open(path, "w", encoding="utf-8") as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: '/opt/airflow/dbt/target/manifest.json'
+
+[0m22:12:46.998271 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 1.278857, "process_in_blocks": "0", "process_kernel_time": 1.304612, "process_mem_max_rss": "119308", "process_out_blocks": "0", "process_user_time": 3.474703}
+[0m22:12:46.999599 [debug] [MainThread]: Command `dbt run` failed at 22:12:46.999426 after 1.28 seconds
+[0m22:12:47.000527 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x746d1a17c2f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x746d1788dcd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x746d1788caa0>]}
+[0m22:12:47.001559 [debug] [MainThread]: Flushing usage events

@@ -1,0 +1,31 @@
+[2026-05-02T12:44:29.268+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-05-02T12:44:29.299+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: orders_kafka_to_s3.produce_orders manual__2026-05-02T12:44:26.705071+00:00 [queued]>
+[2026-05-02T12:44:29.320+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: orders_kafka_to_s3.produce_orders manual__2026-05-02T12:44:26.705071+00:00 [queued]>
+[2026-05-02T12:44:29.321+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2026-05-02T12:44:29.350+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): produce_orders> on 2026-05-02 12:44:26.705071+00:00
+[2026-05-02T12:44:29.365+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=3033) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-05-02T12:44:29.370+0000] {standard_task_runner.py:72} INFO - Started process 3034 to run task
+[2026-05-02T12:44:29.371+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'orders_kafka_to_s3', 'produce_orders', 'manual__2026-05-02T12:44:26.705071+00:00', '--job-id', '75', '--raw', '--subdir', 'DAGS_FOLDER/main.py', '--cfg-path', '/tmp/tmpe34fd_3d']
+[2026-05-02T12:44:29.374+0000] {standard_task_runner.py:105} INFO - Job 75: Subtask produce_orders
+[2026-05-02T12:44:29.502+0000] {task_command.py:467} INFO - Running <TaskInstance: orders_kafka_to_s3.produce_orders manual__2026-05-02T12:44:26.705071+00:00 [running]> on host 548e02207ef4
+[2026-05-02T12:44:29.622+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='kafka_streaming' AIRFLOW_CTX_DAG_ID='orders_kafka_to_s3' AIRFLOW_CTX_TASK_ID='produce_orders' AIRFLOW_CTX_EXECUTION_DATE='2026-05-02T12:44:26.705071+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-05-02T12:44:26.705071+00:00'
+[2026-05-02T12:44:29.623+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2026-05-02T12:44:29.658+0000] {producer.py:98} INFO - Producer starting at offset 200 — will send 8 rows
+[2026-05-02T12:44:30.679+0000] {producer.py:83} INFO - Delivered to orders_topic [0]
+[2026-05-02T12:44:30.682+0000] {producer.py:83} INFO - Delivered to orders_topic [0]
+[2026-05-02T12:44:30.685+0000] {producer.py:83} INFO - Delivered to orders_topic [0]
+[2026-05-02T12:44:30.687+0000] {producer.py:83} INFO - Delivered to orders_topic [0]
+[2026-05-02T12:44:30.690+0000] {producer.py:83} INFO - Delivered to orders_topic [0]
+[2026-05-02T12:44:30.693+0000] {producer.py:83} INFO - Delivered to orders_topic [0]
+[2026-05-02T12:44:30.696+0000] {producer.py:83} INFO - Delivered to orders_topic [0]
+[2026-05-02T12:44:30.698+0000] {producer.py:83} INFO - Delivered to orders_topic [0]
+[2026-05-02T12:44:30.734+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2026-05-02T12:44:30.756+0000] {producer.py:145} INFO - Producer done. Rows sent: 8  |  Next offset: 208
+[2026-05-02T12:44:30.761+0000] {python.py:240} INFO - Done. Returned value was: {'rows_sent': 8, 'next_offset': 208}
+[2026-05-02T12:44:30.885+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2026-05-02T12:44:30.889+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=orders_kafka_to_s3, task_id=produce_orders, run_id=manual__2026-05-02T12:44:26.705071+00:00, execution_date=20260502T124426, start_date=20260502T124429, end_date=20260502T124430
+[2026-05-02T12:44:31.091+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-05-02T12:44:31.264+0000] {taskinstance.py:3901} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-05-02T12:44:31.272+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

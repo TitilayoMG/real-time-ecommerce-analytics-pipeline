@@ -1,0 +1,30 @@
+[2026-05-07T16:48:35.672+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-05-07T16:48:35.712+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: kafka_to_s3.load_data_to_redshift scheduled__2026-05-06T00:00:00+00:00 [queued]>
+[2026-05-07T16:48:35.727+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: kafka_to_s3.load_data_to_redshift scheduled__2026-05-06T00:00:00+00:00 [queued]>
+[2026-05-07T16:48:35.728+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2026-05-07T16:48:35.750+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): load_data_to_redshift> on 2026-05-06 00:00:00+00:00
+[2026-05-07T16:48:35.760+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=71) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-05-07T16:48:35.763+0000] {standard_task_runner.py:72} INFO - Started process 72 to run task
+[2026-05-07T16:48:35.763+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'kafka_to_s3', 'load_data_to_redshift', 'scheduled__2026-05-06T00:00:00+00:00', '--job-id', '143', '--raw', '--subdir', 'DAGS_FOLDER/main.py', '--cfg-path', '/tmp/tmpu4ddx_70']
+[2026-05-07T16:48:35.765+0000] {standard_task_runner.py:105} INFO - Job 143: Subtask load_data_to_redshift
+[2026-05-07T16:48:35.851+0000] {task_command.py:467} INFO - Running <TaskInstance: kafka_to_s3.load_data_to_redshift scheduled__2026-05-06T00:00:00+00:00 [running]> on host af5111aca223
+[2026-05-07T16:48:36.022+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='kafka_streaming' AIRFLOW_CTX_DAG_ID='kafka_to_s3' AIRFLOW_CTX_TASK_ID='load_data_to_redshift' AIRFLOW_CTX_EXECUTION_DATE='2026-05-06T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-05-06T00:00:00+00:00'
+[2026-05-07T16:48:36.025+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2026-05-07T16:48:36.052+0000] {redshift_loader.py:25} INFO - Step 1: Connecting to Redshift...
+[2026-05-07T16:48:36.068+0000] {base.py:84} INFO - Retrieving connection 'redshift_conn'
+[2026-05-07T16:49:05.044+0000] {redshift_loader.py:46} INFO - Connected to Redshift successfully
+[2026-05-07T16:49:05.046+0000] {redshift_loader.py:68} INFO - Step 2: Creating table if not exists...
+[2026-05-07T16:49:06.786+0000] {logging_mixin.py:190} INFO - ✔ Table ensured
+[2026-05-07T16:49:06.787+0000] {redshift_loader.py:75} INFO - Table ensured successfully
+[2026-05-07T16:49:06.807+0000] {redshift_loader.py:93} INFO - Step 3: Copying data from S3 to Redshift...
+[2026-05-07T16:49:08.721+0000] {logging_mixin.py:190} INFO - ✔ COPY completed successfully from S3 to Redshift
+[2026-05-07T16:49:08.722+0000] {redshift_loader.py:100} INFO - COPY completed successfully
+[2026-05-07T16:49:08.725+0000] {redshift_loader.py:113} INFO - Redshift connection closed
+[2026-05-07T16:49:08.727+0000] {python.py:240} INFO - Done. Returned value was: None
+[2026-05-07T16:49:08.754+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2026-05-07T16:49:08.755+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=kafka_to_s3, task_id=load_data_to_redshift, run_id=scheduled__2026-05-06T00:00:00+00:00, execution_date=20260506T000000, start_date=20260507T164835, end_date=20260507T164908
+[2026-05-07T16:49:08.832+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-05-07T16:49:08.868+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-05-07T16:49:08.873+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

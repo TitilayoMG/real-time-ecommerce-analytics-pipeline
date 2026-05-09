@@ -1,0 +1,185 @@
+[2026-05-07T16:51:41.533+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-05-07T16:51:41.562+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: kafka_to_s3.dbt_bronze manual__2026-05-07T16:50:51.263067+00:00 [queued]>
+[2026-05-07T16:51:41.575+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: kafka_to_s3.dbt_bronze manual__2026-05-07T16:50:51.263067+00:00 [queued]>
+[2026-05-07T16:51:41.577+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2026-05-07T16:51:41.595+0000] {taskinstance.py:2890} INFO - Executing <Task(BashOperator): dbt_bronze> on 2026-05-07 16:50:51.263067+00:00
+[2026-05-07T16:51:41.605+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=131) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-05-07T16:51:41.608+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'kafka_to_s3', 'dbt_bronze', 'manual__2026-05-07T16:50:51.263067+00:00', '--job-id', '147', '--raw', '--subdir', 'DAGS_FOLDER/main.py', '--cfg-path', '/tmp/tmpp9uz_z3j']
+[2026-05-07T16:51:41.611+0000] {standard_task_runner.py:72} INFO - Started process 132 to run task
+[2026-05-07T16:51:41.611+0000] {standard_task_runner.py:105} INFO - Job 147: Subtask dbt_bronze
+[2026-05-07T16:51:41.700+0000] {task_command.py:467} INFO - Running <TaskInstance: kafka_to_s3.dbt_bronze manual__2026-05-07T16:50:51.263067+00:00 [running]> on host af5111aca223
+[2026-05-07T16:51:41.921+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='kafka_streaming' AIRFLOW_CTX_DAG_ID='kafka_to_s3' AIRFLOW_CTX_TASK_ID='dbt_bronze' AIRFLOW_CTX_EXECUTION_DATE='2026-05-07T16:50:51.263067+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-05-07T16:50:51.263067+00:00'
+[2026-05-07T16:51:41.922+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2026-05-07T16:51:41.952+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2026-05-07T16:51:41.959+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'docker compose exec dbt dbt run --select bronze']
+[2026-05-07T16:51:41.989+0000] {subprocess.py:99} INFO - Output:
+[2026-05-07T16:51:42.315+0000] {subprocess.py:106} INFO - unknown flag: --select
+[2026-05-07T16:51:42.316+0000] {subprocess.py:106} INFO - See 'docker --help'.
+[2026-05-07T16:51:42.317+0000] {subprocess.py:106} INFO - 
+[2026-05-07T16:51:42.319+0000] {subprocess.py:106} INFO - Usage:  docker [OPTIONS] COMMAND
+[2026-05-07T16:51:42.320+0000] {subprocess.py:106} INFO - 
+[2026-05-07T16:51:42.321+0000] {subprocess.py:106} INFO - A self-sufficient runtime for containers
+[2026-05-07T16:51:42.322+0000] {subprocess.py:106} INFO - 
+[2026-05-07T16:51:42.323+0000] {subprocess.py:106} INFO - Common Commands:
+[2026-05-07T16:51:42.323+0000] {subprocess.py:106} INFO -   run         Create and run a new container from an image
+[2026-05-07T16:51:42.324+0000] {subprocess.py:106} INFO -   exec        Execute a command in a running container
+[2026-05-07T16:51:42.325+0000] {subprocess.py:106} INFO -   ps          List containers
+[2026-05-07T16:51:42.326+0000] {subprocess.py:106} INFO -   build       Build an image from a Dockerfile
+[2026-05-07T16:51:42.327+0000] {subprocess.py:106} INFO -   pull        Download an image from a registry
+[2026-05-07T16:51:42.327+0000] {subprocess.py:106} INFO -   push        Upload an image to a registry
+[2026-05-07T16:51:42.329+0000] {subprocess.py:106} INFO -   images      List images
+[2026-05-07T16:51:42.329+0000] {subprocess.py:106} INFO -   login       Authenticate to a registry
+[2026-05-07T16:51:42.330+0000] {subprocess.py:106} INFO -   logout      Log out from a registry
+[2026-05-07T16:51:42.331+0000] {subprocess.py:106} INFO -   search      Search Docker Hub for images
+[2026-05-07T16:51:42.332+0000] {subprocess.py:106} INFO -   version     Show the Docker version information
+[2026-05-07T16:51:42.333+0000] {subprocess.py:106} INFO -   info        Display system-wide information
+[2026-05-07T16:51:42.334+0000] {subprocess.py:106} INFO - 
+[2026-05-07T16:51:42.334+0000] {subprocess.py:106} INFO - Management Commands:
+[2026-05-07T16:51:42.335+0000] {subprocess.py:106} INFO -   builder     Manage builds
+[2026-05-07T16:51:42.336+0000] {subprocess.py:106} INFO -   checkpoint  Manage checkpoints
+[2026-05-07T16:51:42.337+0000] {subprocess.py:106} INFO -   container   Manage containers
+[2026-05-07T16:51:42.337+0000] {subprocess.py:106} INFO -   context     Manage contexts
+[2026-05-07T16:51:42.338+0000] {subprocess.py:106} INFO -   image       Manage images
+[2026-05-07T16:51:42.339+0000] {subprocess.py:106} INFO -   manifest    Manage Docker image manifests and manifest lists
+[2026-05-07T16:51:42.340+0000] {subprocess.py:106} INFO -   network     Manage networks
+[2026-05-07T16:51:42.340+0000] {subprocess.py:106} INFO -   plugin      Manage plugins
+[2026-05-07T16:51:42.341+0000] {subprocess.py:106} INFO -   system      Manage Docker
+[2026-05-07T16:51:42.342+0000] {subprocess.py:106} INFO -   trust       Manage trust on Docker images
+[2026-05-07T16:51:42.342+0000] {subprocess.py:106} INFO -   volume      Manage volumes
+[2026-05-07T16:51:42.343+0000] {subprocess.py:106} INFO - 
+[2026-05-07T16:51:42.344+0000] {subprocess.py:106} INFO - Swarm Commands:
+[2026-05-07T16:51:42.345+0000] {subprocess.py:106} INFO -   config      Manage Swarm configs
+[2026-05-07T16:51:42.346+0000] {subprocess.py:106} INFO -   node        Manage Swarm nodes
+[2026-05-07T16:51:42.346+0000] {subprocess.py:106} INFO -   secret      Manage Swarm secrets
+[2026-05-07T16:51:42.347+0000] {subprocess.py:106} INFO -   service     Manage Swarm services
+[2026-05-07T16:51:42.348+0000] {subprocess.py:106} INFO -   stack       Manage Swarm stacks
+[2026-05-07T16:51:42.349+0000] {subprocess.py:106} INFO -   swarm       Manage Swarm
+[2026-05-07T16:51:42.350+0000] {subprocess.py:106} INFO - 
+[2026-05-07T16:51:42.351+0000] {subprocess.py:106} INFO - Commands:
+[2026-05-07T16:51:42.351+0000] {subprocess.py:106} INFO -   attach      Attach local standard input, output, and error streams to a running container
+[2026-05-07T16:51:42.352+0000] {subprocess.py:106} INFO -   commit      Create a new image from a container's changes
+[2026-05-07T16:51:42.353+0000] {subprocess.py:106} INFO -   cp          Copy files/folders between a container and the local filesystem
+[2026-05-07T16:51:42.353+0000] {subprocess.py:106} INFO -   create      Create a new container
+[2026-05-07T16:51:42.354+0000] {subprocess.py:106} INFO -   diff        Inspect changes to files or directories on a container's filesystem
+[2026-05-07T16:51:42.355+0000] {subprocess.py:106} INFO -   events      Get real time events from the server
+[2026-05-07T16:51:42.356+0000] {subprocess.py:106} INFO -   export      Export a container's filesystem as a tar archive
+[2026-05-07T16:51:42.356+0000] {subprocess.py:106} INFO -   history     Show the history of an image
+[2026-05-07T16:51:42.357+0000] {subprocess.py:106} INFO -   import      Import the contents from a tarball to create a filesystem image
+[2026-05-07T16:51:42.358+0000] {subprocess.py:106} INFO -   inspect     Return low-level information on Docker objects
+[2026-05-07T16:51:42.358+0000] {subprocess.py:106} INFO -   kill        Kill one or more running containers
+[2026-05-07T16:51:42.359+0000] {subprocess.py:106} INFO -   load        Load an image from a tar archive or STDIN
+[2026-05-07T16:51:42.360+0000] {subprocess.py:106} INFO -   logs        Fetch the logs of a container
+[2026-05-07T16:51:42.361+0000] {subprocess.py:106} INFO -   pause       Pause all processes within one or more containers
+[2026-05-07T16:51:42.362+0000] {subprocess.py:106} INFO -   port        List port mappings or a specific mapping for the container
+[2026-05-07T16:51:42.363+0000] {subprocess.py:106} INFO -   rename      Rename a container
+[2026-05-07T16:51:42.364+0000] {subprocess.py:106} INFO -   restart     Restart one or more containers
+[2026-05-07T16:51:42.364+0000] {subprocess.py:106} INFO -   rm          Remove one or more containers
+[2026-05-07T16:51:42.365+0000] {subprocess.py:106} INFO -   rmi         Remove one or more images
+[2026-05-07T16:51:42.366+0000] {subprocess.py:106} INFO -   save        Save one or more images to a tar archive (streamed to STDOUT by default)
+[2026-05-07T16:51:42.367+0000] {subprocess.py:106} INFO -   start       Start one or more stopped containers
+[2026-05-07T16:51:42.368+0000] {subprocess.py:106} INFO -   stats       Display a live stream of container(s) resource usage statistics
+[2026-05-07T16:51:42.368+0000] {subprocess.py:106} INFO -   stop        Stop one or more running containers
+[2026-05-07T16:51:42.369+0000] {subprocess.py:106} INFO -   tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+[2026-05-07T16:51:42.370+0000] {subprocess.py:106} INFO -   top         Display the running processes of a container
+[2026-05-07T16:51:42.371+0000] {subprocess.py:106} INFO -   unpause     Unpause all processes within one or more containers
+[2026-05-07T16:51:42.371+0000] {subprocess.py:106} INFO -   update      Update configuration of one or more containers
+[2026-05-07T16:51:42.372+0000] {subprocess.py:106} INFO -   wait        Block until one or more containers stop, then print their exit codes
+[2026-05-07T16:51:42.373+0000] {subprocess.py:106} INFO - 
+[2026-05-07T16:51:42.373+0000] {subprocess.py:106} INFO - Global Options:
+[2026-05-07T16:51:42.374+0000] {subprocess.py:106} INFO -       --config string      Location of client config files (default
+[2026-05-07T16:51:42.375+0000] {subprocess.py:106} INFO -                            "/home/***/.docker")
+[2026-05-07T16:51:42.376+0000] {subprocess.py:106} INFO -   -c, --context string     Name of the context to use to connect to the
+[2026-05-07T16:51:42.377+0000] {subprocess.py:106} INFO -                            daemon (overrides DOCKER_HOST env var and
+[2026-05-07T16:51:42.378+0000] {subprocess.py:106} INFO -                            default context set with "docker context use")
+[2026-05-07T16:51:42.379+0000] {subprocess.py:106} INFO -   -D, --debug              Enable debug mode
+[2026-05-07T16:51:42.379+0000] {subprocess.py:106} INFO -   -H, --host list          Daemon socket to connect to
+[2026-05-07T16:51:42.380+0000] {subprocess.py:106} INFO -   -l, --log-level string   Set the logging level ("debug", "info",
+[2026-05-07T16:51:42.381+0000] {subprocess.py:106} INFO -                            "warn", "error", "fatal") (default "info")
+[2026-05-07T16:51:42.382+0000] {subprocess.py:106} INFO -       --tls                Use TLS; implied by --tlsverify
+[2026-05-07T16:51:42.382+0000] {subprocess.py:106} INFO -       --tlscacert string   Trust certs signed only by this CA (default
+[2026-05-07T16:51:42.383+0000] {subprocess.py:106} INFO -                            "/home/***/.docker/ca.pem")
+[2026-05-07T16:51:42.384+0000] {subprocess.py:106} INFO -       --tlscert string     Path to TLS certificate file (default
+[2026-05-07T16:51:42.385+0000] {subprocess.py:106} INFO -                            "/home/***/.docker/cert.pem")
+[2026-05-07T16:51:42.386+0000] {subprocess.py:106} INFO -       --tlskey string      Path to TLS key file (default
+[2026-05-07T16:51:42.387+0000] {subprocess.py:106} INFO -                            "/home/***/.docker/key.pem")
+[2026-05-07T16:51:42.388+0000] {subprocess.py:106} INFO -       --tlsverify          Use TLS and verify the remote
+[2026-05-07T16:51:42.389+0000] {subprocess.py:106} INFO -   -v, --version            Print version information and quit
+[2026-05-07T16:51:42.390+0000] {subprocess.py:106} INFO - 
+[2026-05-07T16:51:42.390+0000] {subprocess.py:106} INFO - Run 'docker COMMAND --help' for more information on a command.
+[2026-05-07T16:51:42.391+0000] {subprocess.py:106} INFO - 
+[2026-05-07T16:51:42.392+0000] {subprocess.py:106} INFO - For more help on how to use Docker, head to https://docs.docker.com/go/guides/
+[2026-05-07T16:51:42.392+0000] {subprocess.py:106} INFO - 
+[2026-05-07T16:51:42.393+0000] {subprocess.py:110} INFO - Command exited with return code 125
+[2026-05-07T16:51:42.413+0000] {taskinstance.py:3313} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 768, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 734, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 276, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 125.
+[2026-05-07T16:51:42.451+0000] {taskinstance.py:1226} INFO - Marking task as FAILED. dag_id=kafka_to_s3, task_id=dbt_bronze, run_id=manual__2026-05-07T16:50:51.263067+00:00, execution_date=20260507T165051, start_date=20260507T165141, end_date=20260507T165142
+[2026-05-07T16:51:42.524+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2026-05-07T16:51:42.526+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 147 for task dbt_bronze (Bash command failed. The command returned a non-zero exit code 125.; 132)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3006, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 274, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3161, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3185, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 768, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 734, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 276, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 125.
+[2026-05-07T16:51:42.554+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2026-05-07T16:51:42.594+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-05-07T16:51:42.602+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

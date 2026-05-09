@@ -1,0 +1,501 @@
+transaction,order_date,customer_id,customer_name,country,product_id,product_category,quantity,price,payment_method,order_status
+T0001,2025-05-28,4,Customer_190,Canada,21,Health,4,115.49,credit card,return
+T0002,2025-05-15,76,Customer_109,US,18,Automotive,1,51.38,paypal,return
+T0003,2025-04-14,72,Customer_51,Australia,20,Garden,9,212.66,debit card,return
+T0004,2025-04-04,98,Customer_41,Australia,9,Beauty,7,173.42,paypal,completed
+T0005,2025-05-23,12,Customer_98,US,11,Books,6,424.51,cash,completed
+T0006,2025-12-31,16,Customer_97,US,15,Grocery,9,150.12,cash,return
+T0007,2026-03-27,9,Customer_12,Australia,7,Sports,4,387.67,credit card,completed
+T0008,2025-10-12,36,Customer_117,Australia,4,Clothing,6,85.51,cash,completed
+T0009,2025-08-15,90,Customer_175,Australia,22,Health,2,306.52,paypal,return
+T0010,2025-06-23,60,Customer_98,Canada,8,Sports,9,113.71,cash,completed
+T0011,2025-04-17,104,Customer_81,France,8,Sports,5,37.76,cash,completed
+T0012,2025-12-12,51,Customer_165,France,21,Health,3,136.12,paypal,return
+T0013,2026-01-01,34,Customer_192,Denmark,18,Automotive,7,449.42,debit card,cancelled
+T0014,2025-06-10,66,Customer_127,US,8,Sports,1,431.25,paypal,return
+T0015,2026-03-15,55,Customer_153,US,6,Home,7,193.9,debit card,return
+T0016,2026-01-09,111,Customer_3,Australia,9,Beauty,2,342.45,cash,return
+T0017,2025-05-28,38,Customer_112,UK,11,Books,8,6.61,cash,return
+T0018,2025-12-16,117,Customer_28,Australia,6,Home,5,421.63,paypal,completed
+T0019,2025-06-22,70,Customer_200,Denmark,12,Books,1,301.48,debit card,completed
+T0020,2025-10-03,113,Customer_79,UK,4,Clothing,1,124.23,credit card,completed
+T0021,2025-05-06,126,Customer_195,Denmark,16,Grocery,3,68.55,debit card,return
+T0022,2025-08-14,68,Customer_156,France,6,Home,4,464.81,paypal,return
+T0023,2025-10-22,86,Customer_167,Canada,10,Beauty,8,450.31,debit card,completed
+T0024,2025-07-25,9,Customer_87,US,8,Sports,10,279.19,paypal,completed
+T0025,2026-03-29,81,Customer_16,UK,3,Clothing,2,453.18,cash,completed
+T0026,2025-07-31,36,Customer_172,France,17,Automotive,4,271.92,debit card,completed
+T0027,2025-10-26,25,Customer_25,US,16,Grocery,7,180.38,debit card,cancelled
+T0028,2026-03-11,84,Customer_166,US,2,Electronics,1,204.3,cash,completed
+T0029,2025-07-08,25,Customer_138,France,8,Sports,3,213.83,cash,cancelled
+T0030,2025-05-09,57,Customer_141,US,8,Sports,1,327.81,credit card,completed
+T0031,2025-06-25,53,Customer_125,France,8,Sports,4,433.0,credit card,completed
+T0032,2025-04-02,127,Customer_100,Canada,13,Toys,8,146.2,debit card,completed
+T0033,2025-08-30,28,Customer_15,Denmark,7,Sports,9,35.17,cash,completed
+T0034,2026-01-25,62,Customer_129,Denmark,2,Electronics,3,33.16,credit card,completed
+T0035,2026-01-30,9,Customer_173,UK,3,Clothing,7,64.34,paypal,return
+T0036,2025-04-21,80,Customer_21,France,20,Garden,10,284.79,cash,cancelled
+T0037,2026-03-09,92,Customer_81,UK,7,Sports,5,200.91,cash,cancelled
+T0038,2025-05-08,2,Customer_118,Denmark,11,Books,10,498.07,credit card,return
+T0039,2025-12-16,34,Customer_34,Canada,7,Sports,2,440.24,cash,cancelled
+T0040,2025-11-11,107,Customer_140,Australia,6,Home,5,307.78,credit card,return
+T0041,2025-09-01,120,Customer_170,US,18,Automotive,3,135.91,credit card,return
+T0042,2025-06-19,35,Customer_73,Denmark,18,Automotive,4,360.22,paypal,return
+T0043,2025-08-14,65,Customer_126,Canada,21,Health,1,50.69,debit card,cancelled
+T0044,2025-04-02,43,Customer_198,UK,2,Electronics,5,84.98,debit card,return
+T0045,2026-01-13,2,Customer_29,US,14,Toys,3,275.07,cash,return
+T0046,2025-06-15,56,Customer_33,US,18,Automotive,5,185.5,credit card,cancelled
+T0047,2026-03-16,32,Customer_171,US,7,Sports,6,391.16,debit card,return
+T0048,2025-07-31,111,Customer_42,UK,5,Home,7,17.27,cash,cancelled
+T0049,2025-08-06,35,Customer_41,Australia,22,Health,2,194.36,credit card,cancelled
+T0050,2025-07-12,105,Customer_118,Canada,8,Sports,5,411.17,paypal,completed
+T0051,2026-03-04,25,Customer_103,Canada,1,Electronics,5,432.85,cash,cancelled
+T0052,2025-12-17,52,Customer_174,Denmark,21,Health,6,469.92,credit card,cancelled
+T0053,2026-01-23,124,Customer_68,US,6,Home,2,300.3,cash,return
+T0054,2025-11-10,78,Customer_131,US,11,Books,7,450.25,paypal,cancelled
+T0055,2026-03-29,56,Customer_1,Denmark,2,Electronics,9,344.99,paypal,cancelled
+T0056,2025-05-06,122,Customer_171,Canada,14,Toys,10,160.39,credit card,return
+T0057,2025-12-16,40,Customer_171,France,10,Beauty,6,204.19,cash,return
+T0058,2025-07-08,54,Customer_171,France,5,Home,3,309.68,cash,cancelled
+T0059,2025-04-01,39,Customer_74,UK,18,Automotive,7,393.95,cash,cancelled
+T0060,2025-11-13,87,Customer_55,Denmark,15,Grocery,8,397.9,paypal,return
+T0061,2025-08-24,66,Customer_170,Australia,3,Clothing,10,170.92,paypal,return
+T0062,2025-07-25,104,Customer_51,UK,10,Beauty,1,27.88,debit card,return
+T0063,2025-11-20,54,Customer_162,Denmark,3,Clothing,4,360.58,debit card,cancelled
+T0064,2025-08-03,19,Customer_168,Australia,13,Toys,1,446.87,credit card,cancelled
+T0065,2025-06-30,103,Customer_179,Denmark,8,Sports,8,29.86,paypal,completed
+T0066,2025-06-08,103,Customer_119,Australia,15,Grocery,9,494.01,cash,cancelled
+T0067,2025-12-15,55,Customer_141,France,20,Garden,3,373.11,debit card,cancelled
+T0068,2025-08-05,108,Customer_164,Canada,9,Beauty,9,244.88,paypal,cancelled
+T0069,2025-05-10,92,Customer_74,UK,15,Grocery,5,171.24,credit card,completed
+T0070,2025-07-28,50,Customer_178,UK,5,Home,4,36.79,debit card,cancelled
+T0071,2025-11-25,54,Customer_16,UK,18,Automotive,7,197.79,credit card,return
+T0072,2025-12-01,1,Customer_91,Canada,13,Toys,7,427.46,debit card,return
+T0073,2026-02-03,115,Customer_57,France,18,Automotive,4,140.1,debit card,completed
+T0074,2025-09-20,86,Customer_174,France,13,Toys,3,421.05,paypal,return
+T0075,2025-04-14,117,Customer_101,Denmark,18,Automotive,10,333.18,credit card,return
+T0076,2025-06-09,111,Customer_119,UK,14,Toys,1,133.78,cash,completed
+T0077,2025-09-15,44,Customer_195,France,15,Grocery,5,377.24,debit card,cancelled
+T0078,2025-11-27,3,Customer_192,Denmark,3,Clothing,1,499.95,cash,completed
+T0079,2025-05-06,100,Customer_167,US,21,Health,1,475.06,paypal,completed
+T0080,2025-06-18,31,Customer_33,France,20,Garden,2,284.16,paypal,cancelled
+T0081,2025-10-06,22,Customer_156,Denmark,9,Beauty,2,390.01,paypal,cancelled
+T0082,2026-01-22,4,Customer_80,Denmark,4,Clothing,7,201.34,paypal,completed
+T0083,2026-03-20,107,Customer_161,UK,19,Garden,2,350.11,cash,return
+T0084,2025-06-01,102,Customer_145,US,20,Garden,6,268.71,cash,completed
+T0085,2026-02-26,44,Customer_4,France,17,Automotive,8,57.24,cash,return
+T0086,2026-03-29,20,Customer_112,UK,15,Grocery,9,482.91,cash,return
+T0087,2025-12-04,60,Customer_112,Australia,18,Automotive,10,137.86,paypal,completed
+T0088,2025-11-17,32,Customer_193,France,9,Beauty,10,307.11,debit card,cancelled
+T0089,2025-12-10,109,Customer_84,UK,1,Electronics,8,110.0,cash,cancelled
+T0090,2026-01-31,90,Customer_71,Denmark,9,Beauty,1,260.73,paypal,completed
+T0091,2025-10-26,63,Customer_143,UK,8,Sports,8,324.72,debit card,cancelled
+T0092,2025-05-18,38,Customer_57,France,1,Electronics,4,156.57,cash,cancelled
+T0093,2025-12-28,45,Customer_109,Australia,18,Automotive,9,168.74,debit card,cancelled
+T0094,2025-08-07,30,Customer_31,Australia,10,Beauty,4,161.2,paypal,completed
+T0095,2025-12-04,36,Customer_186,Denmark,7,Sports,9,300.41,credit card,completed
+T0096,2025-07-26,47,Customer_46,Canada,10,Beauty,1,355.47,paypal,cancelled
+T0097,2025-04-28,71,Customer_75,Australia,2,Electronics,3,320.75,debit card,completed
+T0098,2026-01-19,37,Customer_121,France,1,Electronics,8,173.65,credit card,cancelled
+T0099,2025-05-29,106,Customer_17,France,16,Grocery,8,41.67,credit card,completed
+T0100,2026-01-14,122,Customer_78,US,5,Home,4,63.63,debit card,return
+T0101,2026-02-11,29,Customer_199,Denmark,20,Garden,7,228.0,debit card,cancelled
+T0102,2025-11-06,40,Customer_146,Denmark,19,Garden,1,306.77,credit card,completed
+T0103,2025-07-18,34,Customer_170,US,21,Health,3,123.73,credit card,completed
+T0104,2025-10-27,58,Customer_177,Denmark,1,Electronics,8,149.17,paypal,cancelled
+T0105,2026-03-26,111,Customer_117,US,10,Beauty,4,462.34,paypal,cancelled
+T0106,2026-01-04,29,Customer_166,UK,4,Clothing,5,414.18,credit card,completed
+T0107,2025-09-05,77,Customer_192,Denmark,6,Home,5,222.38,debit card,return
+T0108,2026-03-25,52,Customer_70,Denmark,10,Beauty,9,249.43,credit card,return
+T0109,2025-11-08,95,Customer_83,Denmark,2,Electronics,5,17.8,paypal,return
+T0110,2026-01-26,122,Customer_6,Australia,19,Garden,5,290.24,paypal,cancelled
+T0111,2026-02-28,57,Customer_72,UK,17,Automotive,10,220.76,debit card,completed
+T0112,2025-09-26,53,Customer_86,Canada,16,Grocery,2,429.58,cash,cancelled
+T0113,2025-08-26,85,Customer_103,Denmark,16,Grocery,1,230.14,cash,cancelled
+T0114,2025-05-30,125,Customer_198,France,11,Books,9,413.34,credit card,return
+T0115,2025-11-23,53,Customer_14,UK,18,Automotive,9,184.08,debit card,return
+T0116,2025-04-27,27,Customer_69,Denmark,15,Grocery,3,464.2,debit card,return
+T0117,2025-06-02,4,Customer_162,Denmark,16,Grocery,4,356.34,cash,return
+T0118,2026-01-08,53,Customer_24,UK,1,Electronics,2,233.42,credit card,return
+T0119,2025-12-12,120,Customer_184,Canada,5,Home,9,354.18,debit card,cancelled
+T0120,2025-08-03,59,Customer_142,UK,16,Grocery,7,99.35,paypal,completed
+T0121,2025-10-30,44,Customer_130,Canada,9,Beauty,1,145.01,cash,return
+T0122,2026-03-04,63,Customer_39,France,19,Garden,9,244.75,cash,return
+T0123,2025-10-11,59,Customer_83,UK,18,Automotive,4,288.04,paypal,cancelled
+T0124,2025-09-10,96,Customer_122,Australia,2,Electronics,7,196.11,paypal,cancelled
+T0125,2025-06-04,65,Customer_152,Canada,2,Electronics,2,437.72,debit card,completed
+T0126,2025-11-20,2,Customer_185,UK,17,Automotive,7,436.11,paypal,completed
+T0127,2025-08-14,44,Customer_160,Australia,16,Grocery,7,326.67,cash,return
+T0128,2025-10-12,123,Customer_82,Australia,18,Automotive,8,436.83,credit card,return
+T0129,2025-07-30,81,Customer_176,Canada,3,Clothing,4,374.65,debit card,completed
+T0130,2026-03-27,112,Customer_26,France,21,Health,3,348.53,credit card,completed
+T0131,2025-04-29,38,Customer_92,Canada,11,Books,7,77.06,debit card,return
+T0132,2025-07-02,22,Customer_45,US,22,Health,10,436.07,paypal,cancelled
+T0133,2025-06-13,30,Customer_119,Australia,19,Garden,5,232.49,credit card,cancelled
+T0134,2026-03-13,70,Customer_41,US,10,Beauty,8,472.89,cash,return
+T0135,2026-03-20,33,Customer_117,Canada,14,Toys,4,499.69,debit card,completed
+T0136,2025-10-13,74,Customer_92,Denmark,8,Sports,5,496.38,cash,completed
+T0137,2025-10-20,36,Customer_3,Denmark,22,Health,1,455.76,debit card,cancelled
+T0138,2026-02-05,103,Customer_91,UK,8,Sports,4,312.34,paypal,return
+T0139,2026-02-16,83,Customer_11,Canada,4,Clothing,8,21.52,cash,return
+T0140,2025-05-17,117,Customer_76,Canada,5,Home,7,91.94,paypal,return
+T0141,2025-12-28,65,Customer_70,UK,12,Books,5,457.45,debit card,cancelled
+T0142,2025-05-29,60,Customer_20,UK,11,Books,4,430.77,debit card,return
+T0143,2025-05-17,102,Customer_102,US,12,Books,5,270.6,debit card,cancelled
+T0144,2026-03-11,34,Customer_150,France,22,Health,6,58.63,paypal,cancelled
+T0145,2026-02-12,114,Customer_144,Canada,1,Electronics,10,114.58,credit card,return
+T0146,2026-03-25,39,Customer_167,France,15,Grocery,2,74.19,credit card,cancelled
+T0147,2025-05-30,13,Customer_61,Denmark,16,Grocery,3,197.38,cash,return
+T0148,2025-11-01,76,Customer_191,Australia,18,Automotive,3,443.28,credit card,cancelled
+T0149,2025-10-26,121,Customer_72,US,20,Garden,6,112.55,debit card,completed
+T0150,2025-05-21,126,Customer_176,Canada,12,Books,9,451.34,cash,completed
+T0151,2025-08-20,25,Customer_32,France,13,Toys,2,333.07,credit card,completed
+T0152,2025-08-03,127,Customer_33,Denmark,11,Books,4,38.96,paypal,return
+T0153,2025-07-29,43,Customer_199,UK,7,Sports,10,6.4,paypal,completed
+T0154,2025-08-07,103,Customer_45,US,18,Automotive,1,70.24,cash,completed
+T0155,2025-09-13,3,Customer_45,Canada,19,Garden,1,67.75,debit card,return
+T0156,2025-05-03,61,Customer_115,Canada,4,Clothing,9,298.86,debit card,return
+T0157,2026-02-09,6,Customer_187,Australia,8,Sports,9,154.31,credit card,completed
+T0158,2025-10-23,55,Customer_176,US,16,Grocery,8,357.64,debit card,completed
+T0159,2025-09-12,78,Customer_38,US,3,Clothing,3,141.13,cash,cancelled
+T0160,2025-12-28,38,Customer_117,Denmark,20,Garden,10,217.95,credit card,return
+T0161,2026-01-08,93,Customer_56,France,21,Health,8,444.61,debit card,cancelled
+T0162,2025-10-22,54,Customer_187,US,15,Grocery,6,216.25,cash,cancelled
+T0163,2026-03-18,119,Customer_122,US,5,Home,2,416.73,credit card,cancelled
+T0164,2025-10-08,104,Customer_34,Denmark,4,Clothing,1,295.3,cash,return
+T0165,2025-10-28,46,Customer_171,France,4,Clothing,1,484.36,cash,cancelled
+T0166,2026-01-21,65,Customer_55,UK,4,Clothing,8,116.0,credit card,cancelled
+T0167,2025-10-06,15,Customer_196,Canada,18,Automotive,10,116.95,debit card,return
+T0168,2026-02-09,87,Customer_165,Denmark,20,Garden,1,306.45,cash,completed
+T0169,2025-08-18,90,Customer_196,Canada,6,Home,6,178.76,paypal,completed
+T0170,2026-03-03,52,Customer_18,UK,19,Garden,1,50.42,paypal,cancelled
+T0171,2025-11-19,44,Customer_41,Canada,14,Toys,5,362.19,credit card,completed
+T0172,2025-06-20,97,Customer_159,US,5,Home,2,139.69,debit card,cancelled
+T0173,2025-11-13,54,Customer_70,UK,20,Garden,9,61.34,debit card,completed
+T0174,2026-03-14,87,Customer_152,France,10,Beauty,9,335.23,credit card,completed
+T0175,2026-02-01,8,Customer_2,UK,13,Toys,5,472.94,paypal,cancelled
+T0176,2025-09-15,16,Customer_2,France,10,Beauty,7,91.97,debit card,return
+T0177,2025-12-13,72,Customer_172,Canada,8,Sports,2,201.55,credit card,cancelled
+T0178,2025-11-22,118,Customer_20,Canada,1,Electronics,10,217.5,debit card,return
+T0179,2025-10-31,38,Customer_30,France,21,Health,1,483.27,paypal,return
+T0180,2026-03-20,118,Customer_93,US,15,Grocery,7,423.02,paypal,cancelled
+T0181,2025-10-23,68,Customer_21,France,19,Garden,5,374.17,paypal,cancelled
+T0182,2025-05-10,66,Customer_163,US,6,Home,9,257.43,cash,cancelled
+T0183,2025-06-15,31,Customer_27,UK,21,Health,5,102.65,paypal,return
+T0184,2025-06-30,122,Customer_198,Australia,3,Clothing,8,234.66,debit card,return
+T0185,2026-02-24,82,Customer_160,Canada,19,Garden,6,79.72,credit card,cancelled
+T0186,2026-02-18,39,Customer_71,Denmark,15,Grocery,1,179.21,credit card,cancelled
+T0187,2025-11-18,5,Customer_15,Canada,15,Grocery,5,42.98,credit card,return
+T0188,2025-12-16,50,Customer_119,Denmark,20,Garden,9,477.34,credit card,cancelled
+T0189,2026-02-28,25,Customer_83,Denmark,19,Garden,8,253.18,credit card,cancelled
+T0190,2025-09-23,126,Customer_183,US,4,Clothing,9,324.83,credit card,completed
+T0191,2025-11-11,68,Customer_134,Denmark,15,Grocery,3,185.13,cash,cancelled
+T0192,2025-09-21,87,Customer_154,US,14,Toys,6,37.63,credit card,return
+T0193,2025-10-15,37,Customer_65,Australia,22,Health,10,437.27,cash,completed
+T0194,2026-03-06,19,Customer_90,Canada,19,Garden,7,68.83,credit card,cancelled
+T0195,2025-10-10,83,Customer_85,UK,18,Automotive,9,51.26,debit card,return
+T0196,2025-04-10,47,Customer_80,UK,12,Books,4,174.16,debit card,completed
+T0197,2025-06-10,20,Customer_20,Canada,8,Sports,2,256.31,credit card,return
+T0198,2026-02-11,17,Customer_153,France,11,Books,3,85.31,paypal,return
+T0199,2025-04-23,53,Customer_94,Australia,15,Grocery,4,484.95,cash,return
+T0200,2025-07-29,69,Customer_62,Canada,15,Grocery,8,452.47,paypal,cancelled
+T0201,2026-01-18,127,Customer_113,France,22,Health,5,390.17,debit card,completed
+T0202,2026-02-04,18,Customer_65,US,7,Sports,8,437.69,credit card,return
+T0203,2025-06-03,37,Customer_22,UK,17,Automotive,5,227.41,paypal,cancelled
+T0204,2025-07-23,105,Customer_116,Canada,3,Clothing,1,210.37,debit card,return
+T0205,2025-07-30,50,Customer_21,Canada,12,Books,4,18.95,credit card,return
+T0206,2025-09-19,102,Customer_38,UK,21,Health,1,147.01,debit card,return
+T0207,2026-03-28,61,Customer_115,Denmark,5,Home,1,453.4,credit card,cancelled
+T0208,2025-06-16,71,Customer_187,Denmark,7,Sports,9,214.51,cash,completed
+T0209,2025-06-02,7,Customer_62,France,10,Beauty,10,231.27,credit card,cancelled
+T0210,2025-12-31,3,Customer_162,Denmark,20,Garden,10,124.76,paypal,cancelled
+T0211,2025-04-01,79,Customer_91,UK,14,Toys,10,211.2,credit card,return
+T0212,2025-05-05,123,Customer_135,Denmark,12,Books,9,394.27,credit card,cancelled
+T0213,2025-04-23,82,Customer_100,Canada,16,Grocery,5,374.92,cash,completed
+T0214,2025-08-02,94,Customer_169,Australia,12,Books,2,386.89,cash,completed
+T0215,2025-09-28,70,Customer_87,Australia,2,Electronics,3,416.04,debit card,return
+T0216,2026-02-18,24,Customer_35,US,16,Grocery,8,23.31,paypal,completed
+T0217,2025-04-22,41,Customer_80,Denmark,7,Sports,7,494.62,debit card,cancelled
+T0218,2026-02-26,25,Customer_74,Canada,2,Electronics,1,433.57,cash,cancelled
+T0219,2025-10-06,56,Customer_103,Australia,4,Clothing,8,447.85,debit card,cancelled
+T0220,2025-12-11,89,Customer_128,Canada,6,Home,9,137.03,credit card,return
+T0221,2025-05-11,56,Customer_155,UK,14,Toys,9,150.41,credit card,completed
+T0222,2026-03-05,38,Customer_79,France,11,Books,10,360.24,paypal,return
+T0223,2025-09-27,58,Customer_11,Australia,15,Grocery,6,309.35,debit card,cancelled
+T0224,2025-04-30,10,Customer_172,Australia,21,Health,7,184.84,paypal,completed
+T0225,2026-02-06,87,Customer_113,US,5,Home,3,38.28,cash,cancelled
+T0226,2026-01-16,5,Customer_155,UK,13,Toys,8,474.67,cash,cancelled
+T0227,2026-01-19,18,Customer_136,Canada,3,Clothing,7,160.62,cash,completed
+T0228,2025-04-14,95,Customer_48,France,4,Clothing,9,196.56,credit card,cancelled
+T0229,2026-03-27,58,Customer_55,Denmark,9,Beauty,5,348.52,debit card,completed
+T0230,2025-06-09,110,Customer_19,France,4,Clothing,3,449.85,debit card,completed
+T0231,2025-09-11,86,Customer_89,Australia,22,Health,2,277.25,cash,cancelled
+T0232,2026-03-31,91,Customer_180,Australia,6,Home,3,397.88,paypal,completed
+T0233,2025-06-11,31,Customer_127,US,7,Sports,6,279.24,cash,cancelled
+T0234,2025-06-06,79,Customer_23,US,18,Automotive,5,202.09,debit card,return
+T0235,2025-10-27,106,Customer_148,US,14,Toys,3,486.33,credit card,cancelled
+T0236,2026-03-15,67,Customer_89,UK,15,Grocery,9,321.7,paypal,completed
+T0237,2025-12-14,117,Customer_15,US,14,Toys,9,80.74,paypal,completed
+T0238,2026-03-30,29,Customer_89,Denmark,11,Books,5,423.74,cash,completed
+T0239,2026-01-08,36,Customer_33,Australia,21,Health,5,309.14,credit card,return
+T0240,2025-06-26,76,Customer_149,UK,21,Health,3,331.07,cash,return
+T0241,2025-04-15,11,Customer_12,Australia,2,Electronics,10,136.0,paypal,return
+T0242,2026-02-11,82,Customer_8,France,14,Toys,9,148.39,cash,cancelled
+T0243,2026-03-17,52,Customer_77,France,8,Sports,2,345.86,paypal,cancelled
+T0244,2025-12-04,60,Customer_53,Canada,14,Toys,10,76.12,cash,return
+T0245,2025-10-22,17,Customer_195,Canada,12,Books,9,283.02,cash,completed
+T0246,2025-06-02,35,Customer_116,UK,15,Grocery,3,52.92,cash,cancelled
+T0247,2025-11-01,32,Customer_41,Canada,20,Garden,10,361.96,paypal,completed
+T0248,2025-12-20,60,Customer_128,Canada,16,Grocery,8,16.47,debit card,return
+T0249,2025-08-02,28,Customer_150,Canada,15,Grocery,1,30.02,debit card,return
+T0250,2026-03-11,61,Customer_74,Denmark,21,Health,1,424.35,debit card,completed
+T0251,2025-10-05,98,Customer_104,Canada,9,Beauty,1,203.29,paypal,cancelled
+T0252,2025-08-26,10,Customer_99,Denmark,18,Automotive,8,383.38,cash,return
+T0253,2026-02-07,16,Customer_33,US,22,Health,7,189.73,cash,return
+T0254,2025-06-13,26,Customer_155,Denmark,12,Books,7,252.54,credit card,completed
+T0255,2025-09-18,103,Customer_122,Denmark,5,Home,8,78.73,paypal,cancelled
+T0256,2025-09-11,21,Customer_101,Denmark,20,Garden,5,298.89,debit card,return
+T0257,2025-09-01,61,Customer_5,Canada,19,Garden,6,338.53,debit card,return
+T0258,2026-03-19,81,Customer_7,Denmark,10,Beauty,8,136.44,paypal,return
+T0259,2026-01-24,62,Customer_44,Denmark,2,Electronics,10,388.43,debit card,completed
+T0260,2025-08-03,5,Customer_147,Australia,22,Health,2,99.44,debit card,cancelled
+T0261,2025-06-17,53,Customer_177,UK,14,Toys,7,253.4,debit card,return
+T0262,2026-03-28,18,Customer_133,UK,2,Electronics,9,165.9,debit card,return
+T0263,2025-09-08,123,Customer_45,France,13,Toys,9,174.45,cash,return
+T0264,2026-02-24,103,Customer_178,Canada,22,Health,10,244.67,paypal,cancelled
+T0265,2025-08-31,29,Customer_77,Canada,18,Automotive,4,346.67,debit card,cancelled
+T0266,2025-09-26,72,Customer_185,Canada,16,Grocery,5,65.33,debit card,cancelled
+T0267,2025-06-14,38,Customer_11,Canada,12,Books,2,176.45,debit card,return
+T0268,2025-12-02,28,Customer_52,Denmark,9,Beauty,5,466.85,cash,completed
+T0269,2026-02-10,95,Customer_151,UK,4,Clothing,4,30.13,paypal,return
+T0270,2025-04-27,13,Customer_106,Canada,8,Sports,8,54.77,paypal,completed
+T0271,2025-06-20,53,Customer_168,France,18,Automotive,8,327.02,cash,cancelled
+T0272,2026-02-25,8,Customer_197,US,10,Beauty,10,119.95,credit card,completed
+T0273,2025-06-30,120,Customer_10,France,14,Toys,8,97.22,cash,completed
+T0274,2025-08-31,73,Customer_155,US,1,Electronics,6,145.86,debit card,completed
+T0275,2025-11-26,35,Customer_50,US,17,Automotive,6,85.43,debit card,return
+T0276,2025-07-05,2,Customer_189,Canada,9,Beauty,5,286.05,paypal,completed
+T0277,2026-02-22,115,Customer_104,France,20,Garden,9,167.32,debit card,return
+T0278,2025-07-04,126,Customer_36,France,4,Clothing,6,468.23,credit card,cancelled
+T0279,2025-07-30,58,Customer_193,Canada,13,Toys,6,154.46,credit card,cancelled
+T0280,2025-10-02,89,Customer_61,US,21,Health,2,235.37,paypal,cancelled
+T0281,2025-12-14,119,Customer_181,Canada,22,Health,2,321.16,cash,cancelled
+T0282,2025-07-23,29,Customer_35,France,20,Garden,3,230.21,cash,cancelled
+T0283,2025-11-28,97,Customer_138,Australia,18,Automotive,4,382.12,credit card,return
+T0284,2025-12-27,91,Customer_93,US,15,Grocery,10,60.54,paypal,return
+T0285,2025-06-16,22,Customer_84,Denmark,18,Automotive,8,62.54,paypal,return
+T0286,2025-12-07,12,Customer_131,France,19,Garden,1,229.45,debit card,cancelled
+T0287,2025-04-30,72,Customer_119,Australia,19,Garden,5,363.02,debit card,cancelled
+T0288,2025-07-21,75,Customer_19,US,1,Electronics,7,175.54,credit card,return
+T0289,2025-05-06,127,Customer_121,US,2,Electronics,5,207.39,paypal,return
+T0290,2025-11-02,48,Customer_98,France,21,Health,7,190.94,paypal,return
+T0291,2025-05-31,23,Customer_138,France,12,Books,9,68.04,paypal,completed
+T0292,2025-08-31,60,Customer_173,Australia,1,Electronics,9,214.94,debit card,completed
+T0293,2025-11-22,45,Customer_40,Canada,8,Sports,4,469.02,credit card,completed
+T0294,2025-11-01,79,Customer_197,US,22,Health,4,107.01,credit card,return
+T0295,2025-11-15,77,Customer_173,Australia,2,Electronics,1,126.14,credit card,cancelled
+T0296,2025-07-29,70,Customer_56,US,15,Grocery,3,254.43,cash,completed
+T0297,2025-09-11,74,Customer_154,Australia,19,Garden,6,122.27,paypal,return
+T0298,2025-07-23,53,Customer_77,Canada,17,Automotive,1,280.58,paypal,return
+T0299,2025-11-05,72,Customer_127,US,22,Health,6,471.09,debit card,return
+T0300,2026-03-23,54,Customer_105,UK,11,Books,5,191.35,debit card,completed
+T0301,2025-09-01,110,Customer_182,UK,8,Sports,8,457.8,debit card,cancelled
+T0302,2025-12-28,18,Customer_100,UK,18,Automotive,5,105.65,credit card,cancelled
+T0303,2025-05-18,69,Customer_186,UK,12,Books,1,137.89,credit card,completed
+T0304,2026-01-26,93,Customer_172,Denmark,7,Sports,4,242.3,cash,cancelled
+T0305,2025-07-18,120,Customer_49,Australia,1,Electronics,2,374.71,debit card,completed
+T0306,2026-03-27,27,Customer_102,UK,20,Garden,9,164.2,cash,cancelled
+T0307,2025-12-30,84,Customer_92,Canada,15,Grocery,5,183.02,debit card,cancelled
+T0308,2025-11-27,98,Customer_82,UK,4,Clothing,6,159.9,credit card,return
+T0309,2025-06-14,3,Customer_67,Denmark,8,Sports,10,291.68,debit card,cancelled
+T0310,2025-07-10,43,Customer_59,France,5,Home,10,417.51,debit card,return
+T0311,2026-03-17,44,Customer_66,France,21,Health,8,233.11,cash,completed
+T0312,2026-01-05,63,Customer_48,Denmark,5,Home,1,264.35,credit card,return
+T0313,2025-04-04,53,Customer_36,Australia,2,Electronics,4,38.64,paypal,completed
+T0314,2025-12-15,59,Customer_96,US,7,Sports,10,320.68,debit card,return
+T0315,2025-04-09,1,Customer_137,Denmark,16,Grocery,7,10.87,cash,return
+T0316,2025-04-09,65,Customer_179,Australia,10,Beauty,7,404.05,paypal,completed
+T0317,2025-12-25,20,Customer_62,UK,4,Clothing,10,265.6,cash,cancelled
+T0318,2025-05-11,48,Customer_104,France,13,Toys,10,125.39,paypal,cancelled
+T0319,2025-05-12,84,Customer_167,US,22,Health,2,205.61,debit card,return
+T0320,2025-04-29,82,Customer_3,Australia,16,Grocery,3,45.93,debit card,return
+T0321,2026-01-15,126,Customer_25,Denmark,11,Books,1,118.73,debit card,cancelled
+T0322,2025-05-09,88,Customer_72,Denmark,2,Electronics,10,330.76,paypal,cancelled
+T0323,2025-07-16,76,Customer_37,Australia,1,Electronics,7,464.79,cash,completed
+T0324,2025-08-02,73,Customer_100,Australia,19,Garden,9,169.21,paypal,return
+T0325,2025-12-13,96,Customer_89,US,3,Clothing,2,221.36,credit card,cancelled
+T0326,2026-02-09,123,Customer_153,France,20,Garden,6,19.66,cash,cancelled
+T0327,2025-07-26,46,Customer_142,France,16,Grocery,7,96.94,debit card,completed
+T0328,2025-08-30,103,Customer_64,Australia,20,Garden,2,45.61,paypal,cancelled
+T0329,2025-06-18,95,Customer_100,Canada,21,Health,6,57.74,credit card,cancelled
+T0330,2025-10-02,98,Customer_70,US,15,Grocery,3,48.21,debit card,cancelled
+T0331,2026-01-10,66,Customer_105,US,18,Automotive,1,49.36,credit card,return
+T0332,2025-09-14,111,Customer_99,US,20,Garden,5,209.84,credit card,return
+T0333,2025-08-03,74,Customer_134,UK,18,Automotive,7,88.9,cash,cancelled
+T0334,2025-12-09,19,Customer_17,UK,9,Beauty,7,141.6,cash,cancelled
+T0335,2025-10-02,33,Customer_64,Australia,3,Clothing,8,298.93,paypal,cancelled
+T0336,2025-06-09,39,Customer_2,France,4,Clothing,6,421.6,debit card,cancelled
+T0337,2025-09-19,56,Customer_167,Denmark,15,Grocery,3,153.72,paypal,cancelled
+T0338,2025-06-30,124,Customer_102,Canada,11,Books,5,368.76,debit card,return
+T0339,2025-09-14,49,Customer_72,France,8,Sports,6,61.37,paypal,return
+T0340,2025-07-02,88,Customer_197,Denmark,18,Automotive,1,476.74,debit card,return
+T0341,2025-11-11,103,Customer_75,Australia,7,Sports,2,410.39,debit card,return
+T0342,2025-06-11,82,Customer_78,UK,16,Grocery,5,331.04,debit card,cancelled
+T0343,2025-11-16,127,Customer_154,France,3,Clothing,10,203.4,debit card,return
+T0344,2025-10-02,90,Customer_138,Denmark,2,Electronics,2,59.14,paypal,return
+T0345,2025-09-29,22,Customer_166,Denmark,22,Health,1,283.79,debit card,cancelled
+T0346,2025-05-25,2,Customer_26,Canada,14,Toys,4,257.78,paypal,cancelled
+T0347,2025-10-18,60,Customer_198,Australia,12,Books,10,346.77,paypal,cancelled
+T0348,2025-12-04,14,Customer_76,France,1,Electronics,2,62.45,paypal,cancelled
+T0349,2025-09-23,59,Customer_53,Denmark,10,Beauty,8,177.41,credit card,cancelled
+T0350,2025-09-11,9,Customer_77,US,15,Grocery,2,16.18,cash,return
+T0351,2026-03-13,103,Customer_43,Australia,4,Clothing,4,260.42,paypal,cancelled
+T0352,2025-11-05,123,Customer_119,UK,18,Automotive,7,316.73,paypal,return
+T0353,2025-11-08,51,Customer_8,Australia,22,Health,10,442.13,debit card,return
+T0354,2025-10-17,1,Customer_181,UK,14,Toys,4,142.78,credit card,return
+T0355,2025-12-31,24,Customer_94,Canada,4,Clothing,4,231.49,cash,return
+T0356,2025-12-27,124,Customer_164,Canada,16,Grocery,10,197.38,debit card,return
+T0357,2025-09-26,46,Customer_118,Denmark,4,Clothing,3,407.8,cash,return
+T0358,2025-05-14,87,Customer_35,Canada,19,Garden,2,123.09,credit card,completed
+T0359,2026-03-22,19,Customer_131,France,12,Books,7,300.23,debit card,cancelled
+T0360,2025-12-06,82,Customer_138,Australia,6,Home,3,279.68,debit card,cancelled
+T0361,2025-07-05,41,Customer_116,Denmark,5,Home,1,433.43,credit card,cancelled
+T0362,2025-07-09,105,Customer_99,Denmark,5,Home,9,328.27,debit card,return
+T0363,2025-10-30,91,Customer_114,France,16,Grocery,3,45.92,credit card,completed
+T0364,2025-04-17,36,Customer_58,Denmark,10,Beauty,5,88.26,debit card,return
+T0365,2026-01-07,66,Customer_29,Denmark,16,Grocery,2,137.61,cash,return
+T0366,2025-11-12,70,Customer_56,France,2,Electronics,2,369.31,paypal,cancelled
+T0367,2025-11-17,34,Customer_90,US,2,Electronics,8,433.32,credit card,completed
+T0368,2026-01-27,89,Customer_90,Australia,7,Sports,10,318.22,paypal,return
+T0369,2025-07-15,105,Customer_53,US,5,Home,10,178.65,cash,return
+T0370,2025-06-26,42,Customer_181,Canada,18,Automotive,5,288.5,credit card,completed
+T0371,2025-05-01,36,Customer_168,UK,14,Toys,3,128.59,cash,completed
+T0372,2025-10-19,63,Customer_37,Denmark,22,Health,5,315.77,debit card,cancelled
+T0373,2026-02-19,102,Customer_197,US,3,Clothing,7,260.23,cash,return
+T0374,2025-11-19,122,Customer_125,Canada,12,Books,10,6.22,credit card,return
+T0375,2026-02-20,86,Customer_179,Canada,15,Grocery,2,398.86,debit card,completed
+T0376,2025-07-18,64,Customer_69,Canada,14,Toys,5,172.19,paypal,return
+T0377,2025-09-23,115,Customer_175,US,16,Grocery,1,54.29,debit card,completed
+T0378,2025-06-20,57,Customer_117,US,4,Clothing,7,105.15,paypal,return
+T0379,2025-06-21,112,Customer_71,US,10,Beauty,6,128.94,cash,return
+T0380,2025-06-24,7,Customer_102,Australia,21,Health,5,364.36,paypal,cancelled
+T0381,2025-05-17,91,Customer_25,US,21,Health,4,241.02,paypal,return
+T0382,2025-12-22,88,Customer_114,US,8,Sports,1,349.32,credit card,cancelled
+T0383,2025-12-01,10,Customer_59,France,5,Home,2,366.73,credit card,completed
+T0384,2025-10-06,113,Customer_77,UK,11,Books,7,387.86,paypal,return
+T0385,2025-06-13,9,Customer_136,Denmark,22,Health,1,307.11,paypal,cancelled
+T0386,2025-07-19,81,Customer_192,UK,12,Books,7,309.96,debit card,completed
+T0387,2025-05-22,18,Customer_193,US,3,Clothing,10,366.35,cash,cancelled
+T0388,2025-06-11,32,Customer_71,Australia,11,Books,2,127.84,cash,return
+T0389,2026-03-04,113,Customer_78,UK,1,Electronics,9,305.43,paypal,return
+T0390,2025-08-30,83,Customer_14,UK,13,Toys,8,196.01,paypal,cancelled
+T0391,2026-01-30,10,Customer_136,US,21,Health,6,467.29,paypal,cancelled
+T0392,2025-11-02,47,Customer_140,Australia,19,Garden,3,382.55,credit card,completed
+T0393,2025-05-05,2,Customer_68,UK,19,Garden,1,461.68,debit card,return
+T0394,2026-02-16,92,Customer_129,France,10,Beauty,7,352.4,credit card,return
+T0395,2026-01-01,79,Customer_40,Canada,18,Automotive,2,158.4,paypal,completed
+T0396,2025-09-15,51,Customer_151,Australia,18,Automotive,2,158.53,debit card,return
+T0397,2025-04-30,32,Customer_23,France,8,Sports,2,229.42,credit card,cancelled
+T0398,2026-03-03,95,Customer_45,US,22,Health,1,355.41,credit card,completed
+T0399,2025-09-25,67,Customer_133,Australia,16,Grocery,5,87.65,paypal,return
+T0400,2025-05-31,99,Customer_8,Canada,9,Beauty,7,139.63,credit card,cancelled
+T0401,2026-02-16,10,Customer_128,France,19,Garden,9,183.26,debit card,return
+T0402,2025-10-06,21,Customer_66,US,6,Home,10,338.69,credit card,completed
+T0403,2025-04-02,6,Customer_4,UK,17,Automotive,1,238.52,debit card,completed
+T0404,2025-04-19,71,Customer_183,Australia,6,Home,7,116.14,paypal,cancelled
+T0405,2025-08-17,106,Customer_20,Denmark,11,Books,6,64.1,credit card,completed
+T0406,2025-12-21,126,Customer_12,France,8,Sports,2,439.11,cash,cancelled
+T0407,2025-05-15,71,Customer_117,US,11,Books,6,104.33,cash,return
+T0408,2025-08-03,60,Customer_95,Denmark,20,Garden,8,498.9,paypal,return
+T0409,2025-08-04,20,Customer_2,France,18,Automotive,1,120.33,cash,return
+T0410,2025-09-19,1,Customer_195,Australia,1,Electronics,7,425.26,cash,completed
+T0411,2025-12-28,126,Customer_61,France,7,Sports,8,480.79,paypal,return
+T0412,2025-05-18,6,Customer_60,Denmark,9,Beauty,7,351.92,cash,cancelled
+T0413,2026-01-23,13,Customer_130,UK,3,Clothing,7,42.04,credit card,cancelled
+T0414,2025-06-06,31,Customer_75,Canada,22,Health,6,463.39,debit card,return
+T0415,2025-09-10,58,Customer_70,UK,11,Books,2,472.06,paypal,return
+T0416,2025-06-19,14,Customer_43,France,4,Clothing,8,160.45,credit card,return
+T0417,2025-07-16,58,Customer_79,France,12,Books,5,426.98,credit card,completed
+T0418,2025-09-03,106,Customer_181,Australia,22,Health,10,24.96,cash,completed
+T0419,2026-03-31,32,Customer_92,France,3,Clothing,9,29.23,cash,cancelled
+T0420,2025-04-16,122,Customer_104,France,6,Home,9,375.3,paypal,completed
+T0421,2025-05-23,103,Customer_36,US,15,Grocery,1,35.53,paypal,completed
+T0422,2025-10-23,48,Customer_176,Australia,7,Sports,2,293.25,cash,completed
+T0423,2025-05-04,26,Customer_166,France,1,Electronics,3,50.53,cash,completed
+T0424,2025-11-23,7,Customer_44,Denmark,2,Electronics,7,411.73,debit card,cancelled
+T0425,2025-10-13,88,Customer_110,UK,1,Electronics,6,111.28,paypal,cancelled
+T0426,2025-11-15,114,Customer_39,US,9,Beauty,10,311.49,paypal,return
+T0427,2025-12-12,53,Customer_141,France,10,Beauty,1,48.42,debit card,completed
+T0428,2025-07-12,83,Customer_135,UK,14,Toys,9,398.45,debit card,return
+T0429,2025-12-02,70,Customer_125,Canada,12,Books,10,253.68,debit card,cancelled
+T0430,2025-04-14,41,Customer_153,UK,6,Home,1,448.4,cash,completed
+T0431,2025-12-28,46,Customer_197,Denmark,16,Grocery,4,487.12,credit card,completed
+T0432,2025-08-02,35,Customer_137,Australia,22,Health,1,383.2,paypal,return
+T0433,2025-09-29,120,Customer_45,UK,13,Toys,4,298.3,cash,return
+T0434,2026-03-27,90,Customer_91,Denmark,1,Electronics,10,75.34,paypal,cancelled
+T0435,2025-09-06,23,Customer_126,US,18,Automotive,2,32.8,paypal,completed
+T0436,2025-12-01,1,Customer_85,Denmark,17,Automotive,4,404.19,cash,return
+T0437,2025-09-13,8,Customer_6,UK,6,Home,10,353.82,paypal,completed
+T0438,2025-10-04,123,Customer_19,Canada,17,Automotive,7,295.08,cash,cancelled
+T0439,2025-06-09,125,Customer_41,Australia,11,Books,7,396.96,debit card,return
+T0440,2025-06-29,91,Customer_144,Australia,11,Books,10,394.56,paypal,return
+T0441,2025-06-29,49,Customer_79,Australia,19,Garden,5,68.04,credit card,return
+T0442,2025-10-18,109,Customer_198,Denmark,19,Garden,1,95.13,cash,return
+T0443,2026-02-22,73,Customer_27,France,8,Sports,3,168.93,credit card,completed
+T0444,2025-09-11,22,Customer_163,US,12,Books,6,226.08,cash,completed
+T0445,2026-03-21,9,Customer_90,Canada,8,Sports,2,361.6,credit card,cancelled
+T0446,2025-11-01,125,Customer_43,France,15,Grocery,8,441.48,cash,return
+T0447,2025-05-22,107,Customer_123,Denmark,13,Toys,4,85.51,credit card,completed
+T0448,2025-04-11,41,Customer_67,US,10,Beauty,2,174.2,debit card,completed
+T0449,2026-01-06,121,Customer_24,Canada,3,Clothing,10,492.71,debit card,return
+T0450,2025-11-07,121,Customer_168,UK,1,Electronics,10,445.43,paypal,completed
+T0451,2025-09-17,27,Customer_49,France,4,Clothing,9,362.41,cash,return
+T0452,2025-08-31,31,Customer_25,US,10,Beauty,7,288.03,debit card,completed
+T0453,2025-10-02,1,Customer_110,US,2,Electronics,5,412.83,debit card,completed
+T0454,2025-04-14,27,Customer_44,Australia,4,Clothing,5,488.64,debit card,completed
+T0455,2025-10-21,61,Customer_126,Australia,10,Beauty,5,50.11,debit card,completed
+T0456,2025-10-13,48,Customer_48,France,12,Books,1,135.33,debit card,cancelled
+T0457,2025-08-16,73,Customer_16,UK,8,Sports,2,47.43,cash,return
+T0458,2026-01-27,30,Customer_142,US,14,Toys,7,410.11,debit card,return
+T0459,2025-11-30,74,Customer_61,France,22,Health,5,44.08,credit card,return
+T0460,2025-12-21,103,Customer_147,Australia,19,Garden,10,77.99,debit card,completed
+T0461,2025-07-18,104,Customer_50,UK,6,Home,1,214.57,debit card,completed
+T0462,2025-06-15,107,Customer_153,Canada,21,Health,6,455.85,credit card,completed
+T0463,2026-01-10,51,Customer_142,Canada,13,Toys,5,262.25,credit card,return
+T0464,2026-01-26,67,Customer_108,US,20,Garden,7,79.07,credit card,completed
+T0465,2025-05-22,101,Customer_74,Denmark,19,Garden,6,439.56,cash,cancelled
+T0466,2025-12-05,74,Customer_156,France,21,Health,1,90.24,debit card,completed
+T0467,2026-02-06,88,Customer_178,France,20,Garden,1,200.92,cash,return
+T0468,2025-04-26,96,Customer_122,Canada,8,Sports,6,15.02,cash,cancelled
+T0469,2025-12-08,110,Customer_179,Australia,9,Beauty,2,486.39,paypal,completed
+T0470,2025-11-13,100,Customer_83,Canada,10,Beauty,7,304.46,credit card,completed
+T0471,2025-07-18,117,Customer_105,Australia,15,Grocery,8,380.95,cash,completed
+T0472,2025-06-21,9,Customer_80,Australia,17,Automotive,9,204.68,credit card,completed
+T0473,2025-07-12,108,Customer_15,UK,7,Sports,1,230.94,cash,return
+T0474,2025-08-19,48,Customer_119,Denmark,7,Sports,7,319.53,credit card,return
+T0475,2025-08-02,48,Customer_126,Denmark,1,Electronics,8,92.9,debit card,return
+T0476,2025-09-27,45,Customer_42,Canada,18,Automotive,2,146.11,debit card,completed
+T0477,2026-01-18,100,Customer_55,UK,6,Home,4,340.46,cash,return
+T0478,2025-12-19,3,Customer_200,Australia,14,Toys,1,239.68,paypal,return
+T0479,2026-02-02,103,Customer_3,UK,6,Home,5,306.13,cash,return
+T0480,2025-08-19,55,Customer_97,Canada,21,Health,8,129.74,debit card,cancelled
+T0481,2025-12-23,106,Customer_160,France,22,Health,10,55.64,cash,return
+T0482,2026-01-30,78,Customer_73,Canada,21,Health,2,243.46,cash,cancelled
+T0483,2025-09-14,111,Customer_71,Canada,21,Health,5,98.24,paypal,completed
+T0484,2025-10-24,85,Customer_82,Australia,20,Garden,3,362.04,debit card,cancelled
+T0485,2025-11-01,52,Customer_100,Australia,9,Beauty,1,293.6,paypal,cancelled
+T0486,2026-03-18,69,Customer_164,France,8,Sports,-9,256.12,paypal,return
+T0487,2025-08-29,13,Customer_121,UK,6,Home,-6,363.97,paypal,return
+T0488,2025-05-16,29,Customer_91,UK,21,Health,-5,213.13,cash,cancelled
+T0489,2025-08-29,60,Customer_31,France,19,Garden,-4,433.86,credit card,cancelled
+T0490,2025-06-01,112,Customer_175,France,17,Automotive,-3,152.69,credit card,completed
+T0491,2025-09-23,53,Customer_146,XYZ,7,Sports,3,161.61,paypal,completed
+T0492,2025-09-18,81,Customer_46,XYZ,16,Grocery,1,7.33,cash,completed
+T0493,2026-01-21,98,Customer_41,XYZ,6,Home,2,69.06,debit card,return
+T0494,2025-10-24,55,Customer_123,XYZ,14,Toys,1,23.67,paypal,return
+T0495,2025-04-08,115,Customer_83,XYZ,12,Books,4,13.87,credit card,return
+T0376,2025-09-07,17,Customer_27,France,12,Books,9,296.39,paypal,completed
+T0128,2025-08-31,122,Customer_75,France,2,Electronics,9,300.2,cash,cancelled
+T0116,2025-06-08,44,Customer_126,Canada,22,Health,4,86.62,debit card,completed
+T0356,2025-07-24,94,Customer_34,UK,8,Sports,1,296.9,paypal,completed
+T0450,2026-03-31,84,Customer_10,France,12,Books,5,386.77,credit card,return
