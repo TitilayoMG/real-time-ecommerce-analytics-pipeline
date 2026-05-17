@@ -1,5 +1,3 @@
-
-
 from airflow.providers.postgres.hooks.postgres import PostgresHook
 import subprocess
 import logging

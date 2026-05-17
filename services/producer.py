@@ -6,7 +6,7 @@ Reads stream_store_dataset.csv row-by-row using an offset stored in an Airflow V
 so each DAG run streams the next 20 rows only — simulating real-time ingestion.
 
 Airflow Variable required:
-    csv_offset  →  starts at 0, auto-incremented by 20 after each run
+    csv_offset  →  starts at 0, auto-incremented by 8 after each run
 
 Airflow Connection required:
     kafka_default  →  Host = broker host, Port = 9092

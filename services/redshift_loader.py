@@ -1,4 +1,3 @@
-
 import logging
 import psycopg2
 from airflow.hooks.base import BaseHook

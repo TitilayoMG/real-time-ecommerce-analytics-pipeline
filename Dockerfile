@@ -10,6 +10,7 @@ RUN apt-get update && apt-get install -y \
 # switch to airflow user for pip installs
 USER airflow
 
+
 RUN pip install --default-timeout=300 --retries 3 --no-cache-dir \
     confluent-kafka==2.3.0 \
     "boto3>=1.34.0,<2.0.0" \

@@ -5,7 +5,7 @@ consumer.py
 Consumes order messages from Kafka, batches them, and writes one CSV file
 to S3 partitioned by date:
 
-    s3://<bucket>/stream_store/year=YYYY/month=MM/day=DD/batch_<ts>_<id>.csv
+    s3://<bucket>/stream_store/YYYY/MM/DD/batch_<ts>_<id>.csv
 
 Exits cleanly after CONSUMER_IDLE_TIMEOUT_S seconds of no new messages
 so Airflow marks the task SUCCESS.

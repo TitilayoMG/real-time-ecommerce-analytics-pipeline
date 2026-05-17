@@ -1,5 +1,5 @@
 """
-dag_orders_pipeline.py
+orders_pipeline.py
 ----------------------
 Airflow DAG: streams 20 rows per run from orders.csv → Kafka → S3.
 
